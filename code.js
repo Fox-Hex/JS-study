@@ -225,22 +225,88 @@
 
 
 // change each array element with .map
-let cars = ['mazda','kia','skoda']
+// let cars = ['mazda','kia','skoda']
 
-console.log(cars.includes('kia'))
+// console.log(cars.includes('kia'))
 
-const upperCaseCars = cars.map(car => {
-    return car.toUpperCase()
-})
-console.log(upperCaseCars);
+// const upperCaseCars = cars.map(car => {
+//     return car.toUpperCase()
+// })
+// console.log(upperCaseCars);
 
-cars = cars.map(car => {
-    return car.toLocaleUpperCase()
-})
-console.log('this is first array',cars);
+// const editCars = cars.map(i => i +' - new')
+// console.log(editCars);
 
-const editCars = cars.map(i => i +' - new')
-console.log(editCars);
+// const var1 = i => i + ' - old '
+// console.log(cars.map(var1));
+// console.log(cars.map(var1).map(var1));
+
+// cars = cars.map(car => {
+//     return car.toLocaleUpperCase()
+// })
+// console.log('this is first array',cars);
+
+
+
+// filter array with .filter
+// const fibA = [0,1,1,2,3,5,8,13,21,43]
+
+// const filter_fibA = fibA.filter(i => {  // or  fibA.filter(i => i >8)
+//     return i > 8
+// })
+
+// console.log(fibA);
+// console.log('more than 8 - ',filter_fibA);
+
+
+
+// summ all array elements with .reduce
+// const investors = [
+//     {id:0, name:'Mark', deposit:5000},
+//     {id:1, name:'Bob', deposit:8700},
+//     {id:2, name:'Petro', deposit:32000},
+//     {id:3, name:'Simona', deposit:1200},
+//     {id:4, name:'Ivan', deposit:100}
+// ]
+// console.log(investors);
+
+// const allDeposites = investors.reduce((accum, person) => {
+//     accum += person.deposit
+//     return accum
+// }, 0)
+
+// console.log(allDeposites);
+
+
+
+
+// summ all array elements more than 6000 with .filter .reduce 
+// const investors = [
+//     {id:0, name:'Mark', deposit:5000},
+//     {id:1, name:'Bob', deposit:8700},
+//     {id:2, name:'Petro', deposit:32000},
+//     {id:3, name:'Simona', deposit:1200},
+//     {id:4, name:'Ivan', deposit:100}
+// ]
+
+// console.log(investors);
+
+// const allDepositesFilteres = investors
+// .filter(person => person.deposit > 6000)
+// .reduce((accum, person) => {
+//     accum += person.deposit
+//     return accum
+// },0)
+
+// console.log(allDepositesFilteres);
+
+
+
+
+
+
+
+
 
 
 
