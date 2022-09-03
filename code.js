@@ -242,7 +242,7 @@ console.log('this is first array',cars);
 const editCars = cars.map(i => i +' - new')
 console.log(editCars);
 
-const 
+
 
 
 
