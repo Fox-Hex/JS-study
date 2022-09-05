@@ -288,16 +288,13 @@
 //     {id:3, name:'Simona', deposit:1200},
 //     {id:4, name:'Ivan', deposit:100}
 // ]
-
 // console.log(investors);
-
 // const allDepositesFilteres = investors
 // .filter(person => person.deposit > 6000)
 // .reduce((accum, person) => {
 //     accum += person.deposit
 //     return accum
 // },0)
-
 // console.log(allDepositesFilteres);
 
 
@@ -306,34 +303,45 @@
 
 
 // const printNumbers = (initialNumber) => {
-//     // BEGIN (write your solution here)
 //     let i = initialNumber
 //     while (i > 0){
 //       console.log(i)
 //       i -=1
 //     }
-//     // END
 //     console.log('finished!')
 //   };
-
 // printNumbers(10)
 
 
 
 
 
+// const joinNumbersFromRange = (start,end) => {
+//   let string = ''
+//   let i = start
+//   while (i <= end){
+//     string = `${string}${i}`
+//     i +=1
+//   }
+//   return string
+// }
+// console.log(joinNumbersFromRange(7,25))
 
-const joinNumbersFromRange = (start,end) => {
-  let string = ''
-  let i = start
-  while (i <= end){
-    string = `${string}${i}`
-  }
-  return string
+
+
+const reverseText = (text) => {
+    let i = 0
+    let rev = ''
+    while (i < text.length) {
+        rev = text[i] + rev
+        i += 1
+    }
+    return rev
 }
 
-console.log(joinNumbersFromRange(1,5))
-// END
+console.log(reverseText('12345'));
+
+
 
 
 
