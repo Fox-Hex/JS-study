@@ -305,21 +305,35 @@
 
 
 
-const printNumbers = (initialNumber) => {
-    // BEGIN (write your solution here)
-    let i = initialNumber
-    while (i > 0){
-      console.log(i)
-      i -=1
-    }
-    // END
-    console.log('finished!')
-  };
+// const printNumbers = (initialNumber) => {
+//     // BEGIN (write your solution here)
+//     let i = initialNumber
+//     while (i > 0){
+//       console.log(i)
+//       i -=1
+//     }
+//     // END
+//     console.log('finished!')
+//   };
 
-printNumbers(10)
+// printNumbers(10)
 
 
 
+
+
+
+const joinNumbersFromRange = (start,end) => {
+  let string = ''
+  let i = start
+  while (i <= end){
+    string = `${string}${i}`
+  }
+  return string
+}
+
+console.log(joinNumbersFromRange(1,5))
+// END
 
 
 
