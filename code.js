@@ -303,6 +303,25 @@
 
 
 
-dffsfdsf
-dffsfdsf
+
+
+const printNumbers = (initialNumber) => {
+    // BEGIN (write your solution here)
+    let i = initialNumber
+    while (i > 0){
+      console.log(i)
+      i -=1
+    }
+    // END
+    console.log('finished!')
+  };
+
+printNumbers(10)
+
+
+
+
+
+
+
 
