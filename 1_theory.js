@@ -363,22 +363,3 @@
   
 // console.log(encrypt('Hello'));
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
