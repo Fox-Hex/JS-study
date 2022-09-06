@@ -342,7 +342,7 @@ const reverseText = (text) => {
 console.log(reverseText('12345'));
 
 
-
+new
 
 
 
