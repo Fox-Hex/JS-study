@@ -329,20 +329,55 @@
 
 
 
-const reverseText = (text) => {
-    let i = 0
-    let rev = ''
-    while (i < text.length) {
-        rev = text[i] + rev
-        i += 1
-    }
-    return rev
-}
+// const reverseText = (text) => {
+//     let i = 0
+//     let rev = ''
+//     while (i < text.length) {
+//         rev = text[i] + rev
+//         i += 1
+//     }
+//     return rev
+// }
+// console.log(reverseText('12345'));
 
-console.log(reverseText('12345'));
 
 
-new
+
+
+
+// const encrypt = (text) => {
+//     let result =''
+  
+//     for (let i = 0; i < text.length; i++){
+//       if ((i+1 === text.length) && ((i+1)%2 !== 0)) {
+//         result = result + text[i]
+//       } else if ((i+1)%2 === 0) {
+//         result = result + text[i-1]
+//       } else {
+//         result = result + text[i+1]
+//       }
+//     }
+  
+//     return result
+//   }
+  
+// console.log(encrypt('Hello'));
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
