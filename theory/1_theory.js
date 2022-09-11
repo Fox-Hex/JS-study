@@ -191,7 +191,7 @@
 
 
 
-[]
+
 // find object in array with cycle
 // const customers = [
 //     {name: 'Ann', balance: 12500},
@@ -363,3 +363,7 @@
   
 // console.log(encrypt('Hello'));
   
+
+
+
+
