@@ -134,17 +134,124 @@
 
 
 
-// 5th task
+// // 5th task
 
-const reverse = (incArray) => {
-    const newArray = []
-    for (let i=0; i < incArray.length; i += 1) {
-      newArray[i] = incArray[incArray.length-1-i]
+// const reverse = (incArray) => {    
+//     const newArray = []
+//     for (let i=0; i < incArray.length; i += 1) {
+//         newArray[i] = incArray[i]
+//     }
+//     for (let i=0; i < incArray.length; i += 1) {
+//       incArray[i] = newArray[incArray.length-1-i]
+//     }
+// }
+
+// const names = ['john', 'smith', 'karl'];
+// reverse(names)
+// console.log(names);
+
+
+
+
+
+
+// // find max
+// const takeMax = (incArray) => {
+//     if (incArray.length === 0) {
+//         return null
+//     }
+//     let max = incArray[0]
+//     for (let i = 1; i < incArray.length; i += 1) {
+//         if (incArray[i] > max) {
+//             max = incArray[i]
+//         }
+//     }
+//     return max
+// }
+// console.log(takeMax([1,8,6,3,3]));
+
+
+
+// // find sum
+// const takeSum = (incArray) => {
+//     let sum = 0
+//     for (let i = 0; i < incArray.length; i += 1) {
+//         sum += incArray[i]
+//     }
+//     return sum
+// }
+// console.log(takeSum([1,2,8,3]));
+
+
+
+// 6th task
+// calcSum = (incArray) => {
+//     if (incArray.length === 0) {
+//       return 0
+//     }
+//     let sum = 0
+//     for (let i = 0; i < incArray.length; i +=1) {
+//       if (incArray[i] % 3 === 0) {
+//         sum += incArray[i]
+//       }
+//     }
+//     return sum
+// }
+// console.log(calcSum([1,2,3,4,5,6,7,8,9])); //sum every elem tha divide by 3
+
+
+
+// // for of...
+// const userNames = ['petya', 'vasya', 'evgeny'];
+// for (const name of userNames) {
+//     console.log(name);
+// }
+
+// const numbers = [10,10,20]
+// let sum = 0
+// for (const num of numbers) {
+//     sum += num
+// }
+// console.log(sum);
+
+
+
+
+
+//7th task
+// const calculateAverage = (temperature) => {
+//     if (temperature.length === 0) {
+//       return null
+//     }
+//     let sum = 0
+//     for (const temp of temperature) {
+//       sum += temp
+//     }
+//     const mid = sum / temperature.length
+//     return mid
+// }
+// console.log(calculateAverage([1,2,3,4,5]));
+
+
+
+
+
+// delete nulls from array by creating new array
+const compact = (incArray) =>{
+    const result = []
+
+    for (const item of incArray) {
+        if (item !== null) {
+            result.push(item)
+        }
     }
-    return newArray
+
+    return result
 }
-const names = ['john', 'smith', 'karl'];
-console.log(reverse(names));
+const a = [3,5,null,4,null]
+console.log(a);
+console.log(compact(a));
+
 
 
 
