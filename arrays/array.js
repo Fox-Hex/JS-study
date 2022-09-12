@@ -63,3 +63,110 @@
 
 
 
+// // 3rd task
+
+// export default (incArray, index, deF = null) => {
+//     if ((index < incArray.length) && (index >= 0)) {
+//       return incArray[index];
+//     }
+//     return deF;
+//   };
+
+
+
+
+// cycle for arrays
+// const userNames = ['petya', 'vasya', 'evgeny'];
+// for (let i = 0; i < userNames.length; i += 1) {
+//     console.log(userNames[i]);
+// }
+
+// edit array
+// const emails = ['VASYA@gmAil.com', 'iGoR@yandex.RU', 'netiD@hot.CoM'];
+// console.log(emails);
+// for (i = 0; i < emails.length; i +=1) {
+//     emails[i] = emails[i].toLowerCase()
+// }
+// console.log(emails);
+
+
+
+
+// // 4th task
+
+// export default addPrefix = (names, prefix) => {
+//     const newNames = [];
+//     for (let i = 0; i < names.length; i += 1) {
+//       newNames[i] = `${prefix} ${names[i]}`;
+//     }
+//     return newNames;
+//   };
+
+
+
+// array compare and change
+
+// const items = ['one','two','three']
+// const items2 = items
+
+// items2.push('four')
+
+// console.log(items);
+// console.log(items2);
+// console.log(items === items2); //true
+
+// console.log([1,2,3]===[1,2,3]); //false
+
+// console.log(items.pop());
+// console.log(items);
+
+// items.sort()
+// console.log(items);
+
+// items.reverse()
+// console.log(items);
+
+// const a = [1,2,3]
+// const b = [4,5,6]
+// const c = a.concat(b)
+// console.log(c);
+
+
+
+
+// 5th task
+
+const reverse = (incArray) => {
+    const newArray = []
+    for (let i=0; i < incArray.length; i += 1) {
+      newArray[i] = incArray[incArray.length-1-i]
+    }
+    return newArray
+}
+const names = ['john', 'smith', 'karl'];
+console.log(reverse(names));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
