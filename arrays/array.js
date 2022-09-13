@@ -439,6 +439,105 @@
 
 
 
+// 12th task using side method _.uniq()
+// const getSameCount = (array1, array2) => {
+//     let sum = 0
+//       for (const item1 of _.uniq(array1)) {
+//       for (const item2 of _.uniq(array2)) {
+//         if (item1 === item2) {
+//           sum += 1
+//         }
+//       }
+//     }  
+//     return sum
+// }
+// const a = [1,2,2,6,7,3,8]
+// const b = [4,4,6,8,2,3,1]
+// console.log(getSameCount(a,b));
+
+
+
+
+// 13th task
+// const countUniqChars = (incString) => {
+//     if (incString === '') {
+//       return 0
+//     }
+//     let sum = 0
+//     const splitString = incString.split('')
+//       for (let i = 0; i < splitString.length; i += 1) {
+//       if (!splitString.includes(splitString[i],i+1)) {
+//         sum += 1
+//       }
+//     }
+//     return sum
+// }
+// console.log(countUniqChars('aassddff'));
+
+
+
+
+
+// sort array with Bubble
+
+// const bubbleSort = (incArray) => {
+//     let steps = incArray.length - 1
+//     let swap
+
+//     do {
+//         swap = false
+
+//         for (let i = 0; i < steps; i += 1) {
+//             if (incArray[i] > incArray[i+1]) {
+//                 const temp = incArray[i]
+//                 incArray[i] = incArray[i+1]
+//                 incArray[i+1] = temp
+//                 swap = true
+//             }
+//         }
+
+//         steps -= 1
+//     } while (swap)
+
+//     return incArray
+// }
+
+// console.log(bubbleSort([5,3,1,45,65,12,7,9,4,6]));
+
+
+
+
+
+// check )(())() is balanced
+const checkBalance = (incString) => {
+    const stack = []
+
+    for (const symbol of incString) {
+        if (symbol === '(') {
+            stack.push(symbol)
+        } else if (symbol === ')') {
+            if (!stack.push()) {
+                return false
+            }
+        }
+    }
+
+    return stack.length === 0
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
