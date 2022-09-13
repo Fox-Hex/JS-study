@@ -236,33 +236,204 @@
 
 
 
-// delete nulls from array by creating new array
-const compact = (incArray) =>{
-    const result = []
+// // delete nulls from array by creating new array
+// const compact = (incArray) =>{
+//     const result = []
 
-    for (const item of incArray) {
-        if (item !== null) {
-            result.push(item)
-        }
-    }
+//     for (const item of incArray) {
+//         if (item !== null) {
+//             result.push(item)
+//         }
+//     }
 
-    return result
-}
-const a = [3,5,null,4,null]
-console.log(a);
-console.log(compact(a));
-
-
+//     return result
+// }
+// const a = [3,5,null,4,null]
+// console.log(a);
+// console.log(compact(a));
 
 
 
 
 
+// 8th task
+// const getSameParity = (incArray) => {
+//   const newArray = []
+//   if (incArray === []) {
+//     return newArray
+//   }
+//   for (const num of incArray) {
+//     if (Math.abs(num) % 2 === 0 && Math.abs(incArray[0]) % 2 === 0) {
+//       newArray.push(num)
+//     }
+//     if (Math.abs(num) % 2 !== 0 && Math.abs(incArray[0]) % 2 !== 0) {
+//       newArray.push(num)
+//     }
+//   }
+//   return newArray
+// }
+// console.log(getSameParity([2,5,6,3,3,9,1,0]));
+
+
+
+
+// 9th task
+// getTotalAmount = (money, currency) => {
+//   let sum = 0
+//   for (const position of money) {
+//     if (position.slice(0,3) !== currency) {
+//       continue
+//     }
+//     sum += Number(position.slice(4))
+//   }
+//   return sum
+// }
+// console.log(getTotalAmount(['eur 10', 'rub 10', 'eur 100', 'rub 200'],'rub'));
+
+
+
+
+// array inside array
+// const array1 = [
+//   1,
+//   [6,7],
+//   [4,[3,2]]
+// ]
+// console.log(array1[2][1][0], array1[2][1].length);
+
+// x,o check
+// const field = [
+//   [null,null,null],
+//   [null,null,null],
+//   [null,null,null]
+// ]
+// field[1][2] = 'x'
+// console.log(field);
+// const checkField = (field, symbol) => {
+//   for (const row of field) {
+//     if (row.includes(symbol)) {
+//       return true
+//     }
+//   }
+//   return false
+// }
+// console.log(checkField(field, 'x'));
+
+
+
+
+// 9th task
+// export default getSuperSeriesWinner = (table) => {
+//   let winsUssr = 0
+//   let winsCanada = 0
+//   for (const match of table) {
+//     if (match[0] > match[1]) {
+//       winsCanada += 1
+//     } else if (match[0] < match[1]) {
+//       winsUssr += 1
+//     }
+//   }
+//   if (winsCanada > winsUssr) {
+//     return 'canada'
+//   }
+//   if (winsCanada < winsUssr) {
+//     return 'ussr'
+//   }
+//   return null
+// }
+
+
+
+
+// using join() to make string from array
+// const buildHTML = (incArray) => {
+//   const parts =[]
+//   for (const item of incArray) {
+//     parts.push(`<li>${item}</li>`)
+//   }
+//   const a = parts.join('')
+//   return `<ul>${a}</ul>`
+// }
+// console.log(buildHTML(['a','b','c']));
+
+// const parts = ['js', 'php', 'html']
+// console.log(parts.join('\n'));
+
+
+
+// 10th task
+// const buildDefinitionList = (list) => {
+//   if (list.length === 0) {
+//     return ''
+//   }
+//   const result = []
+//   for (const row of list) {
+//     result.push(`<dt>${row[0]}</dt><dd>${row[1]}</dd>`)
+//   }
+//   return `<dl>${result.join('')}</dl>`
+// }
+// a = [
+//   ['1', 'abc'],
+//   ['2', 'def']
+// ]
+// console.log(buildDefinitionList(a));
 
 
 
 
 
+// split string into array, modify and join into string - .split() .join()
+// const capitalize = (text) =>
+//   (text.length === 0) ? text : `${text[0].toUpperCase()}${text.slice(1)}`
+
+// const capitalizeWords = (sentence) => {
+//   const words = sentence.split(' ')
+//   const result = []
+//   for (const word of words) {
+//     result.push(capitalize(word))
+//   }
+//   return result.join(' ')
+// }
+
+// console.log(capitalizeWords('das sd as asd sd'));
+
+
+
+
+
+// 11th task
+// const makeCensored = (incSentence, stopWords) => {
+//   const result = []
+//   const words = incSentence.split(' ')
+//   for (const word of words) {
+//     (stopWords.includes(word)) ? result.push('$#%!') : result.push(word)
+//   }
+//   return result.join(' ')
+// }
+// const a = 'Have a big house, but small finger'
+// console.log(makeCensored(a,['big', 'small']));
+
+
+
+
+
+
+// flatten array with inner cycle
+// const flatten = (incArray) => {
+//   const result =[]
+//   for (const item of incArray) {
+//     if (Array.isArray(item)) {
+//       for (const subItem of item) {
+//         result.push(subItem)
+//       }
+//     } else {
+//     result.push(item)
+//     }
+//   }
+//   return result
+// }
+// const a = [1,2,[3,4],1,8,[4]]
+// console.log(flatten(a));
 
 
 
