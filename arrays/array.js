@@ -509,25 +509,152 @@
 
 
 // check )(())() is balanced
-const checkBalance = (incString) => {
-    const stack = []
+// const checkBalance = (incString) => {
+//     const stack = []
+//     for (const symbol of incString) {
+//         if (symbol === '(') {
+//             stack.push(symbol)
+//         } else if (symbol === ')') {
+//             if (!stack.pop()) {
+//                 return false
+//             }
+//         }
+//     }
+//     return stack.length === 0
+// }
+// console.log(checkBalance('())'));
 
-    for (const symbol of incString) {
-        if (symbol === '(') {
-            stack.push(symbol)
-        } else if (symbol === ')') {
-            if (!stack.push()) {
-                return false
-            }
-        }
+
+
+
+
+
+
+
+// 14th task
+// const openingSymbols = ['(', '[', '{', '<'];
+// const closingSymbols = [')', ']', '}', '>'];
+
+// const isBracketStructureBalanced = (incString) => {
+//     const stack =[]
+//     for (const symbol of incString) {
+//         if (openingSymbols.includes(symbol)) {
+//             stack.push(symbol)
+//         } else if (closingSymbols.includes(symbol)) {
+//             const pop = stack.pop()
+//             if (pop === false) {
+//                 return false
+//             } else if (openingSymbols.indexOf(pop) !== closingSymbols.indexOf(symbol)) {
+//                 return false
+//             }
+//         }
+//     }    
+//     return stack.length === 0
+// }
+// console.log(isBracketStructureBalanced('({<[]>})'));
+
+
+
+
+// 15th task
+// const getIntersectionOfSortedArrays = (array1, array2) => {
+//     let index1 = 0
+//     let index2 = 0
+//     const result = []  
+//     while (index1 < array1.length && index2 < array2.length) {
+//       if ((array1[index1] === array2[index2]) && (array1[index1] !== array1[index1-1])) {
+//         result.push(array1[index1])
+//         index1 += 1
+//         index2 += 1
+//       } else if (array1[index1] > array2[index2]) {
+//         index2 += 1
+//       } else {
+//         index1 += 1
+//       }
+//     }
+//     return result
+// }
+// const a = [1,2,3,4,5,6,15]
+// const b = [3,5,6,9,10,15]
+// console.log(getIntersectionOfSortedArrays(a,b));
+
+
+
+
+
+
+
+
+// array destructuring 
+
+// const point = [3, 5, 1, 4]
+
+// const [x, y] = point
+// console.log(x);
+
+// const [a] = point
+// const [ ,b] = point
+// console.log(a,b);
+
+// const [ , c, d, e, , f, g, h = 0] = [1,2,3,4,5,6]
+// console.log(c);
+// console.log(d);
+// console.log(e);
+// console.log(f);
+// console.log(g);
+// console.log(h);
+
+// const points = [
+//     [1,2],
+//     [3,4],
+//     [5,6]
+// ]
+
+// for (const [x,y] of points) {
+//     console.log([x,y]);
+// }
+
+// const swapValues = ([a,b]) => [b,a]
+// console.log(swapValues([1,9])); 
+
+// const [a,b,c] = 'hello'
+// console.log(a);
+// console.log(b);
+// console.log(c);
+
+const getDistance = ([x1, y1], [x2, y2]) => {
+    const xs = x2 - x1;
+    const ys = y2 - y1;
+  
+    return Math.sqrt(xs ** 2 + ys ** 2);
+};
+
+  
+const getTheNearestLocation = (locations, currentPoint) => {
+    if (locations === []) {
+        return null
     }
 
-    return stack.length === 0
+    const distanceArray = []
+
+  
+    for (const [xLoc, yLoc] of locations) {
+        distanceArray.push(getDistance(xLoc, yLoc, currentPoint))
+    }
+
+
+
 }
 
-
-
-
+const locations = [
+    ['Park', [10, 5]],
+    ['Sea', [1, 3]],
+    ['Museum', [8, 4]],
+];
+   
+const currentPoint = [5, 5];
+  
+console.log(getTheNearestLocation(locations, currentPoint));
 
 
 
