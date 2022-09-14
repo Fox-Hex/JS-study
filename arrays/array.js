@@ -622,46 +622,99 @@
 // console.log(b);
 // console.log(c);
 
-const getDistance = ([x1, y1], [x2, y2]) => {
-    const xs = x2 - x1;
-    const ys = y2 - y1;
-  
-    return Math.sqrt(xs ** 2 + ys ** 2);
-};
 
+
+
+
+
+
+//16th task
+// const getDistance = ([x1, y1], [x2, y2]) => {
+//     const xs = x2 - x1;
+//     const ys = y2 - y1;
   
-const getTheNearestLocation = (locations, currentPoint) => {
-    if (locations === []) {
+//     return Math.sqrt(xs ** 2 + ys ** 2);
+// };
+
+// const getTheNearestLocation = (locations, currentPoint) => {
+//     const placesArray = [] // for place names and distance from point to them
+//     const distanceArray = [] // holding all distances in simple array
+//     let closePlace = '' // to store name of closest place
+    
+//     // making 2 arrays: 1 = place names + distance; 2 = distance
+//     for (const [place, [xLoc, yLoc]] of locations) {
+//         placesArray.push([place, getDistance([xLoc, yLoc], currentPoint)])
+//         distanceArray.push(getDistance([xLoc, yLoc], currentPoint))
+//     }
+    
+//     // sort distances to find min element (first one)
+//     distanceArray.sort()
+
+//     // finding name of place by minimum element of distance array
+//     for (const [place, distance] of placesArray) {
+//         if (distance === distanceArray[0]) {
+//             closePlace = place
+//         }
+//     }
+
+//     // return name of place and coordinates from original array
+//     for (const [place, [xLoc, yLoc]] of locations) {
+//         if (place === closePlace) {
+//             return [place, [xLoc, yLoc]]
+//         }
+//     }
+
+//     return null
+// }
+
+// const locations = [
+//     ['Park', [10, 5]],
+//     ['Sea', [1, 3]],
+//     ['Museum', [8, 4]],
+// ];
+// const currentPoint = [5, 5];
+// console.log(getTheNearestLocation([], currentPoint));
+
+
+
+
+
+// rest operator
+// const fruits = ['apple', 'orange', 'banana', 'pineapple'];
+// const [first,...rest] = fruits
+// console.log(first);
+// console.log(rest);
+
+// console.log(fruits.slice(1));
+
+// const [a, b,...etc] = 'hello world'
+// console.log(a);
+// console.log(b);
+// console.log(etc);
+
+
+
+
+
+
+// 17th task
+const getMax = (incArray) => {
+    if (incArray.length === 0) {
         return null
     }
 
-    const distanceArray = []
+    [first,...rest] = incArray
 
-  
-    for (const [xLoc, yLoc] of locations) {
-        distanceArray.push(getDistance(xLoc, yLoc, currentPoint))
+    for (const a of rest) {
+        if (a > first) {
+            first = a
+        }
+ 
     }
-
-
-
+    return first
 }
 
-const locations = [
-    ['Park', [10, 5]],
-    ['Sea', [1, 3]],
-    ['Museum', [8, 4]],
-];
-   
-const currentPoint = [5, 5];
-  
-console.log(getTheNearestLocation(locations, currentPoint));
-
-
-
-
-
-
-
+console.log(getMax([3,2,7,5,4,9,5]));
 
 
 
