@@ -679,7 +679,7 @@
 
 
 
-// rest operator
+// ...rest operator
 // const fruits = ['apple', 'orange', 'banana', 'pineapple'];
 // const [first,...rest] = fruits
 // console.log(first);
@@ -698,27 +698,69 @@
 
 
 // 17th task
-const getMax = (incArray) => {
-    if (incArray.length === 0) {
-        return null
-    }
-
-    [first,...rest] = incArray
-
-    for (const a of rest) {
-        if (a > first) {
-            first = a
-        }
- 
-    }
-    return first
-}
-
-console.log(getMax([3,2,7,5,4,9,5]));
+// const getMax = (incArray) => {
+//     if (incArray.length === 0) {
+//         return null
+//     }
+//     let [first,...rest] = incArray
+//     for (const a of rest) {
+//         if (a > first) {
+//             first = a
+//         }
+//     }
+//     return first
+// }
+// console.log(getMax([3,2,7,5,4,9,5]));
 
 
 
 
+
+// // ...spread operator
+// const numbs1 = [3,4,5]
+
+// const a = [1,2, ...numbs1]
+// console.log(a);
+
+// const b = [1,...numbs1, 2]
+// console.log(b);
+
+// const c = [...numbs1, 1, 2]
+// console.log(c);
+
+// const numbs2 = [6,7,8,9]
+
+// const d = [...numbs1, ...numbs2]
+// console.log(d);
+
+
+// // using spread for full copy array value
+// const cities = ['moscow', 'paris', 'london']
+// const citiesCopy = [...cities]
+
+// citiesCopy.push('boston')
+
+// console.log(cities === citiesCopy);
+// console.log(cities);
+// console.log(citiesCopy);
+
+
+
+
+
+// 18th task
+// const flatten =(incArray) => {
+//     let result = []
+//     for (const elem of incArray) {
+//         if (Array.isArray(elem)) {
+//             result = [...result, ...elem]
+//         } else {
+//             result = [...result, elem]
+//         }
+//     }
+//     return result
+// }
+// console.log(flatten([1, [[2], [3]], [9]]));
 
 
 
