@@ -666,6 +666,63 @@ const print = (message) => {
 
 
 // challenge 4
+// const findWhere = (books, search) => {
+//   for (const row of books) {
+//     let findStatus = true
+//     for (const key in search) {
+//       if (search[key] !== row[key]) {
+//         findStatus = false
+//       }
+//     }
+//     if (findStatus) {
+//       return row
+//     }
+//   }
+//   return null
+// }
+
+// print(findWhere(
+//   [
+//     { title: 'Book of Fooos', author: 'FooBar', year: 1111 },
+//     { title: 'Cymbeline', author: 'Shakespeare', year: 1611 },
+//     { title: 'The Tempest', author: 'Shakespeare', year: 1611 },
+//     { title: 'Book of Foos Barrrs', author: 'FooBar', year: 2222 },
+//     { title: 'Still foooing', author: 'FooBar', year: 3333 },
+//     { title: 'Happy Foo', author: 'FooBar', year: 4444 },
+//   ],
+//   { author: 'Shakespeare', year: 1611 }
+// ))
+
+
+
+// challenge 4 (not done)
+// const toRoman = (number) => {
+//   const arab = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000]
+//   const rome = ['I','IV','V','IX','X','XL','L','XC','C','CD','D','CM','M']
+//   let result = ''
+//   i = arab.length - 1
+//   while (number > 0) {
+//     if (number >= arab[i]) {
+//       result += rome[i]
+//       number -= arab[i]
+//     } else {
+//       i -= 1
+//     }
+//   }
+//   return result
+// }
+// print(toRoman(1)) // 'I'
+// print(toRoman(59)) // 'LIX'
+// print(toRoman(3000)) // 'MMM'
+
+
+
+
+
+
+
+
+
 
 
 
