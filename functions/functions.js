@@ -85,26 +85,109 @@
 
 
 // 4th task
-const run = (text) => {
-  const takeLast = (text, num) => {
-    if (text.length < num || text === "") {
-      return null;
-    }
-    const textArray = text.split("").reverse();
-    const result = [];
-    for (let i = 0; i < num; i += 1) {
-      result.push(textArray[i]);
-    }
-    return result.join("");
-  };
+// const run = (text) => {
+//   const takeLast = (text, num) => {
+//     if (text.length < num || text === "") {
+//       return null;
+//     }
+//     const textArray = text.split("").reverse();
+//     const result = [];
+//     for (let i = 0; i < num; i += 1) {
+//       result.push(textArray[i]);
+//     }
+//     return result.join("");
+//   };
+//   return takeLast(text, 4);
+// };
+// console.log(run(""));
+// console.log(run("cb"));
+// console.log(run("power"));
+// console.log(run("hexlet"));
 
-  return takeLast(text, 4);
-};
 
-console.log(run(""));
-console.log(run("cb"));
-console.log(run("power"));
-console.log(run("hexlet"));
+
+
+
+
+// 5th task
+// const takeOldest = (users, num = 1) => {
+//   const sortedUsers = _.sortBy(users, [(users) => Date.parse(users.birthday)])
+//   return sortedUsers.slice(0, num)  
+// }
+// const users = [
+//   { name: 'Tirion', birthday: 'Nov 19, 1988' },
+//   { name: 'Sam', birthday: 'Nov 22, 1999' },
+//   { name: 'Rob', birthday: 'Jan 11, 1975' },
+//   { name: 'Sansa', birthday: 'Mar 20, 2001' },
+//   { name: 'Tisha', birthday: 'Feb 27, 1992' },
+//   { name: 'Chris', birthday: 'Dec 25, 1995' },
+// ];
+// console.table(takeOldest(users, 2))
+
+
+
+
+
+
+// // mapping
+// const users = [
+//   { name: 'Igor', age: 19 },
+//   { name: 'Danil', age: 1 },
+//   { name: 'Vovan', age: 4 },
+//   { name: 'Matvey', age: 16 },
+// ];
+
+// const names = users.map((user) => user.age)
+// console.log(names);
+
+// const numbers = [5, 2, 3];
+// const newNumbers = numbers.map((num) => num *2)
+// console.log(newNumbers);
+
+
+
+
+// 6th task
+// const getChildren = (users) => {
+//   const result = []
+//   return users.map((user) => user.children).flat(Infinity)
+// }
+
+// const users = [
+//   {
+//     name: 'Tirion',
+//     children: [
+//       { name: 'Mira', birthday: '1983-03-23' },
+//     ],
+//   },
+//   { name: 'Bronn', children: [] },
+//   {
+//     name: 'Sam',
+//     children: [
+//       { name: 'Aria', birthday: '2012-11-03' },
+//       { name: 'Keit', birthday: '1933-05-14' },
+//     ],
+//   },
+//   {
+//     name: 'Rob',
+//     children: [
+//       { name: 'Tisha', birthday: '2012-11-03' },
+//     ],
+//   },
+// ];
+ 
+// console.log(getChildren(users))
+// // [
+// //   { name: 'Mira', birthday: '1983-03-23' },
+// //   { name: 'Aria', birthday: '2012-11-03' },
+// //   { name: 'Keit', birthday: '1933-05-14' },
+// //   { name: 'Tisha', birthday: '2012-11-03' },
+// // ];
+
+
+
+
+
 
 
 
