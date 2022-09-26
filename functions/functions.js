@@ -149,7 +149,6 @@
 
 // 6th task
 // const getChildren = (users) => {
-//   const result = []
 //   return users.map((user) => user.children).flat(Infinity)
 // }
 
@@ -175,14 +174,7 @@
 //     ],
 //   },
 // ];
- 
 // console.log(getChildren(users))
-// // [
-// //   { name: 'Mira', birthday: '1983-03-23' },
-// //   { name: 'Aria', birthday: '2012-11-03' },
-// //   { name: 'Keit', birthday: '1933-05-14' },
-// //   { name: 'Tisha', birthday: '2012-11-03' },
-// // ];
 
 
 
@@ -190,8 +182,119 @@
 
 
 
+// 7th task
+// const getGirlFriends = (users, sex = 'female') => {
+//   return users
+//     .map((user) => user.friends)
+//      .flat(Infinity)
+//       .filter((user) => user.gender === sex)
+// }
+
+// const users = [
+//   {
+//     name: 'Tirion',
+//     friends: [
+//       { name: 'Mira', gender: 'female' },
+//       { name: 'Ramsey', gender: 'male' },
+//     ],
+//   },
+//   { name: 'Bronn', friends: [] },
+//   {
+//     name: 'Sam',
+//     friends: [
+//       { name: 'Aria', gender: 'female' },
+//       { name: 'Keit', gender: 'female' },
+//     ],
+//   },
+//   {
+//     name: 'Rob',
+//     friends: [
+//       { name: 'Taywin', gender: 'male' },
+//     ],
+//   },
+// ];
+// console.table(getGirlFriends(users))
+// console.table(getGirlFriends(users,'male'))
 
 
+
+
+
+
+
+// redce()
+// const users = [
+//   { name: 'Igor', amount: 19 },
+//   { name: 'Danil', amount: 1 },
+//   { name: 'Vovan', amount: 4 },
+//   { name: 'Matvey', amount: 16 },
+// ];
+// const sum = users.reduce((accum, user) => accum + user.amount, 0)
+// console.log(sum);
+
+// const users2 = [
+//   { name: 'Petr', age: 4 },
+//   { name: 'Igor', age: 19 },
+//   { name: 'Vovan', age: 4 },
+//   { name: 'Matvey', age: 16 },
+// ];
+// const cb = (accum, user) => {
+//   if (!Object.hasOwn(accum, user.age)) {
+//     accum[user.age] = []
+//   }
+//   accum[user.age].push(user.name)
+//   return accum
+// }
+// const usersByAge = users2.reduce(cb, {})
+// console.table(usersByAge);
+
+
+// const courses = [
+//   {
+//     name: 'Arrays',
+//     lessons: [{ name: 'One' }, { name: 'Two' } ]
+//   },
+//   {
+//     name: 'Objects',
+//     lessons: [{ name: 'Lala' }, { name: 'One' }, { name: 'Two' } ]
+//   }
+// ];
+
+// let result = 0
+// for (const oneCourse of courses) {
+//   result += oneCourse.lessons.length
+// }
+
+// const result2 = courses.reduce((accum, oneCourse) => accum + oneCourse.lessons.length , 0)
+
+// console.log(result);
+// console.log(result2);
+
+
+
+// myReduce (analog of reduce())
+// const myReduce = (collection, callback, init) => {
+//   let accum = init
+//   for (const item of collection) {
+//     accum = callback(accum, item)
+//   }
+//   return accum
+// }
+
+// const users = [
+//   { name: 'Petr', age: 4 },
+//   { name: 'Igor', age: 19 },
+//   { name: 'Vovan', age: 4 },
+//   { name: 'Matvey', age: 16 },
+// ];
+
+// const oldest = myReduce(
+//   users,
+//   (accum, user) => (user.age > accum.age ? user : accum),
+//   users[0]
+//   )
+
+// console.log(oldest);
 
 
 
