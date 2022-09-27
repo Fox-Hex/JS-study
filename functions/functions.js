@@ -365,6 +365,42 @@
 
 
 
+// 9th task
+// const freeEmailDomains = [
+//     'gmail.com',
+//     'yandex.ru',
+//     'hotmail.com',
+//     'yahoo.com',
+//   ];
+
+// const getFreeDomainsCount = (emails) => {
+//   const result = emails
+//     .map((mail) => mail.split("@")[1])
+//     .filter((mail) => freeEmailDomains.includes(mail))
+//     .reduce((accum, mail) => {
+//       if (!Object.hasOwn(accum, mail)) {
+//         accum[mail] = 0;
+//       }
+//       accum[mail] += 1;
+//       return accum;
+//     }, {});
+//   return result;
+// };
+
+// const emails = [
+//     'info@gmail.com',
+//     'info@yandex.ru',
+//     'info@hotmail.com',
+//     'mk@host.com',
+//     'support@hexlet.io',
+//     'key@yandex.ru',
+//     'sergey@gmail.com',
+//     'vovan@gmail.com',
+//     'vovan@hotmail.com',
+// ]; 
+// console.log(getFreeDomainsCount(emails))
+
+
 
 
 
