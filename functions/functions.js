@@ -246,7 +246,7 @@
 //   return accum
 // }
 // const usersByAge = users2.reduce(cb, {})
-// console.table(usersByAge);
+// console.log(usersByAge);
 
 
 // const courses = [
@@ -295,6 +295,81 @@
 //   )
 
 // console.log(oldest);
+
+
+
+
+
+
+
+// 8th task
+// const groupBy = (students, property) => {
+//     const cb = (accum, stud) => {
+//         if (!Object.hasOwn(accum, stud[property])) {
+//             accum[stud[property]] = []
+//         }
+//         accum[stud[property]].push(stud)
+//         return accum
+//     }
+//     return students.reduce(cb, {})
+//     // const result = students.reduce((accum, stud) => {
+//     //     if (!Object.hasOwn(accum, stud[property])) {
+//     //         accum[stud[property]] = []
+//     //     }
+//     //     accum[stud[property]].push(stud)
+//     // }, {})
+//     // return result
+// }
+
+// teacher's result
+// const groupBy = (students, property) => students.reduce((accum, stud) => {
+//     const group = accum[stud[property]] ?? []
+//     return {...accum, [stud[property]] : group.concat(stud)}
+// }, {})
+
+// const students = [
+//     { name: 'Tirion', class: 'B', mark: 3 },
+//     { name: 'Keit', class: 'A', mark: 3 },
+//     { name: 'Ramsey', class: 'A', mark: 4 },
+// ];
+// console.log(groupBy([], ''))
+// console.log(groupBy(students, 'mark'))
+
+
+
+
+
+// signals
+// const getJSFileNames = (files) => {
+//     const result = []
+//     for (const file of files) {
+//         const extension = fs.extname(file).toLowerCase()
+//         if (fs.existsSync(file) && fs.lstatSybc(file).isFile() && extension === 'js') {
+//             result.push(path.basename(file.toLowerCase(), extension))
+//         }
+//     }
+//     return result
+// }
+// console.log(getJSFileNames(['index.js', 'wop.JS', 'nonexists', 'node_modules']))
+
+// const getJSFileNames = (files) => paths
+//     .filter((filepath) => fs.existsSync(filepath))
+//     .filter((filepath) => fs.lstatSybc(filepath).isFile())
+//     .filter((filepath) => fs.extname(filepath).toLowerCase() === 'js')
+//     .map((filepath) => path.basename(filepath.toLowerCase(), '.js'))
+// console.log(getJSFileNames(['index.js', 'wop.JS', 'nonexists', 'node_modules']))
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
