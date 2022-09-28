@@ -406,6 +406,65 @@
 
 
 
+// 10th task
+// const sequenceSum = (begin, end) => {
+//     if (begin > end) { return NaN }
+//     if (begin === end) { return begin }
+//     return end + sequenceSum(begin, end-1)
+// };
+
+// console.log(sequenceSum(1, 5))
+// console.log(sequenceSum(4, 10))
+// console.log(sequenceSum(-3, 2))
+// console.log(sequenceSum(7, 2))
+// console.log(sequenceSum(0, 0))
+// console.log(sequenceSum(6, 6))
+
+
+
+
+
+
+// iterative function
+// const factorial = (n=0) => {
+//     if (n <= 0) {
+//         return 1
+//     }
+//     const iter = (counter, accum) => {
+//         if (counter === 1) {
+//             return accum
+//         }
+//         return iter(counter-1, accum * counter)
+//     }
+//     return iter(n, 1)
+// }
+
+// console.log(factorial(3));
+
+
+
+
+
+
+// 11th task
+// const smallestDivisor = (num) => {
+//     if (num ===1 ) {
+//         return 1
+//     }
+//     const getDev = (num, devider) => {
+//         if (num % devider === 0) {
+//             return devider
+//         }
+//         return getDev(num, devider+1)
+//     }
+//     return getDev(num, 2)
+// }
+
+// console.log(smallestDivisor(1))
+// console.log(smallestDivisor(15))
+// console.log(smallestDivisor(17))
+
+
 
 
 
