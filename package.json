@@ -19,5 +19,9 @@
   "homepage": "https://github.com/Fox-Hex/JS-study#readme",
   "dependencies": {
     "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "babel-preset-power-assert": "^3.0.0",
+    "power-assert": "^1.6.1"
   }
 }
