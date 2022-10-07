@@ -1,6 +1,4 @@
-import getImpelementation from "../src/fill";
-
-const fill = getImpelementation();
+import fill from "../src/fill";
 
 let array;
 beforeEach(() => {
