@@ -1,4 +1,3 @@
-// 1st task
 const removeFirstLevel = (tree) => {
     return tree
         .filter((element) => Array.isArray(element))
