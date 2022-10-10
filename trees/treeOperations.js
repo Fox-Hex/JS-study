@@ -23,3 +23,21 @@ const getNodesCount = (tree) => {
 }
 
 
+
+
+
+
+const getFilesCount = (node) => {
+    if (isFile(node)) {
+        return 1
+    }
+    const agro = getChildren(node).map(getFilesCount)
+    return _.sum(agro)
+}
+
+const getSubdirectoriesInfo = (tree) => {
+    const result = getChildren(tree)
+        .filter(isDirectory)
+        .map((child) => [getName(child), getFilesCount(child)])
+    return result
+}
