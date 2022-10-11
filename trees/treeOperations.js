@@ -41,3 +41,21 @@ const getSubdirectoriesInfo = (tree) => {
         .map((child) => [getName(child), getFilesCount(child)])
     return result
 }
+
+
+
+
+const getEmptyDirs = (tree) => {
+    const name = getName(tree)
+    const children = getChildren(tree)
+
+    if (children.length ===0) {
+        return name
+    }
+
+    const checkDir = children
+        .filter((child) => !isFile(child))
+        .flatMap(getEmptyDirs)
+    
+    return checkDir
+}
