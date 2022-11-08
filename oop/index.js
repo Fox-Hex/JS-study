@@ -267,3 +267,37 @@
 // const company = new Company('fox', 'fox.io')
 // console.log(company.getName());
 // console.log(company.getWebsite());
+
+
+
+
+// prototype
+
+// const date = new Date()
+// console.log(Date);
+// console.log(Object.getPrototypeOf(date));
+
+// console.log(Object.getPrototypeOf([1,2]));
+
+
+// function Company(name) {
+//   this.name = name
+// }
+
+// const comp = new Company('foo')
+// console.log(comp);
+
+// Company.prototype.getName = function () {
+//   return this.name
+// }
+
+// const comp2 = new Company('foo')
+// console.log(comp2.getName());
+
+// Array.prototype.map = function () {
+//   return 'woohoo!'
+// }
+// console.log([1,2].map())
+
+
+
