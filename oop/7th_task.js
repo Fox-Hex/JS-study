@@ -1,16 +1,11 @@
 function magic(...arguments) {
   let sum = 0;
   arguments.forEach((elem) => sum = sum + elem)
-  return (...arguments2) => magic(sum,...arguments2)
+  return (...arguments2) => magic.valueOf
 }
 
-magic.valueOf = (...arguments) => {
-  let sum = 0;
-  arguments.forEach((elem) => sum = sum + elem)
-  return sum
-}
-
-console.log(magic());
+magic.valueOf = () => 0
+magic()
 console.log(magic() == 0); // true
 console.log(magic(5, 2, -8) == -1); // true
 console.log(magic(1, 2)(3, 4, 5)(6)(7, 10) == 38); // true

@@ -301,3 +301,13 @@
 
 
 
+
+function some() {
+}
+some.valueOf = () => 5
+console.log(some == 5);
+
+const obj = {}
+obj.valueOf = () => 5
+console.log(obj == 5);
+
