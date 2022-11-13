@@ -311,3 +311,128 @@
 // obj.valueOf = () => 5
 // console.log(obj == 5);
 
+
+
+
+// const company = {name: 'Fox'}
+
+// console.log(company.toString());
+// console.log(`Hello ${company}`);
+
+// company.toString = function() {
+//   return this.name + this.name
+// }
+
+// console.log(`elo ${company}`);
+
+// console.log(JSON.stringify(company));
+
+
+
+
+
+// Classes
+
+// class Company {
+//   employees = []
+//   constructor(name, email) {
+//     this.name = name
+//     this.email = email
+//   }
+//   getName() {
+//     return this.name
+//   }
+//   getEmail() {
+//     return this.email
+//   }
+//   getEmployees() {
+//     return this.employees
+//   }
+// }
+
+// const myCompany = new Company('fox-hex', 'help@fox-hex.org')
+// console.log(myCompany);
+// console.log(myCompany.getName());
+// console.log(myCompany.getEmail());
+// console.log(myCompany.getEmployees());
+
+// Company.prototype.greeting = function() {
+//   return `Hello ${this.name}`
+// }
+
+// console.log(myCompany.greeting());
+
+
+
+
+// fail
+
+// class Money {
+//   constructor() {
+//     this.rates = {usd:{eur:0.7}, eur:{usd:1.2}};
+//   }
+// }
+// Money.setRate = function(from, to, value) {
+//   this.rates[from][to] = value
+// }
+// Money.setRate('usd', 'eur', 20) // Cannot read properties of undefined (reading 'usd')
+// const mon1 = new Money()
+// console.log(mon1.rates.usd.eur);
+
+
+
+
+// class Money {
+//   rates = this.constructor.rates
+//   constructor() {
+//   }
+//   static rates = {
+//     usd:{eur:0.7},
+//     eur:{usd:1.2}
+//   }
+//   static setRate(from, to, value) {
+//     this.rates[from][to] = value
+//   }
+// }
+
+// const mon1 = new Money()
+// console.log(mon1.rates.usd);
+// Money.setRate('usd', 'eur', 20)
+// console.log(mon1.rates.usd);
+
+
+
+
+// const e = new Error('something')
+
+// try {
+//   throw e;
+// } catch (myError) {
+//   console.log(myError);
+// }
+
+
+
+// const func1 = () => {
+//   throw Error('func1 error!!!')
+// }
+// const func2 = () => func1()
+// const func3 = () => func2()
+
+// try {
+//   func3();
+// } catch (e) {
+//   console.log(e);
+// }
+
+
+
+// let result = ''
+// try {
+//   result += 'one'
+// } catch (e) {
+//   result += ' two' 
+// }
+// result += ' three'
+// console.log(result);
+
