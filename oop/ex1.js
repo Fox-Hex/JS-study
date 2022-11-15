@@ -43,11 +43,11 @@ const tree = new Node(9,
       new Node(20),
       null)));
 
-const node = tree.search(20);
-console.log(node);
-console.log(node.getKey()) // 6
-console.log(node.getLeft().getKey()) // 5
-console.log(node.getRight().getKey()) // 7
+const this = tree.search(20);
+console.log(this);
+console.log(this.getKey()) // 6
+console.log(this.getLeft().getKey()) // 5
+console.log(this.getRight().getKey()) // 7
  
 console.log(tree.search(35)) // null
 console.log(tree.search(3).getLeft()) // null
