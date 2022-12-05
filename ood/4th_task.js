@@ -1,16 +1,18 @@
-normalize = (countries) => {
+const normalize = (countries) => {
   const norm = countries.map((elem) => {
-    name = elem.name.toLowerCase().trim()
-    country = elem.country.toLowerCase().trim()
+    const name = elem.name.toLowerCase().trim()
+    const country = elem.country.toLowerCase().trim()
     return {name, country}
   })
   console.table(norm);
 
-  // const set = new Set(norm.map(elem => elem.country))
-  // const val = Array.from(set)
-  // console.log(val);
+  const set = new Set(norm.map(elem => elem.country))
+  const val = Array.from(set)
+  const val2 = Object.fromEntries(val.map(elem => [elem, []]))
 
-
+  const a = {b:[]}
+  console.log(a.b.push(1));
+  return val2
 }
 
 const countries = [
@@ -18,7 +20,7 @@ const countries = [
   { name: 'samarA', country: '  ruSsiA' },
   { name: 'Moscow ', country: ' Russia' },
 ];
-console.table(normalize(countries));
+console.log(normalize(countries));
 // {
 //   russia: [
 //     'moscow',
