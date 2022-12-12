@@ -1,5 +1,4 @@
-const normalize = (countries) => {
-  
+const normalize = (countries) => {  
   const normArray = countries.map((elem) => {
     const name = elem.name.toLowerCase().trim()
     const country = elem.country.toLowerCase().trim()
@@ -13,6 +12,7 @@ const normalize = (countries) => {
       .filter(elem => elem.country === cur)
       .map(elem => elem.name)
       .sort()
+      .filter((elem, i, arr) => arr.indexOf(elem) === i)
     return acc
   }, {})
   
