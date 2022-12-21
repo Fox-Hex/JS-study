@@ -1,5 +1,9 @@
 import * as yup from 'yup';
 
-const shema = yup.array().min(4)
+const shema = yup.object().shape({
+  name: yup.string().required(),
+  age: yup.number().required().integer().positive()
+})
 
-console.log(shema.validateSync([1,2,4]));
+const data = { name: 'ivan', age: 23 }
+console.log(shema.validateSync(data));
