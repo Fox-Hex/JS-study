@@ -1,15 +1,16 @@
 import * as yup from 'yup';
 
 const getInvalidBooks = (books) => {
+
   const shema = yup.object().shape({
     name: yup.string().required(),
     author: yup.string().required(),
     pagesCount: yup.number().positive().integer(),
-    link: yup.string().url(),
+    link: yup.string().min(1).url(),
     genre: yup.string().oneOf(genres)
   })
 
-  return books.map(elem => shema.validateSync(elem))
+  return books.filter(elem => !shema.isValidSync(elem))
 }
 
 // name – строка, обязательное
@@ -23,7 +24,7 @@ const genres = [
 ];
 
 const books = [
-  { name: 'book', author: 'author' },
+  { name: 'book', author: 'author', link: '' },
   { author: 'author 2' },
 ];
 
