@@ -37,11 +37,25 @@
 const student = {
   name: 'Alex',
   age: 23,
-  program: 'front-end'
+  program: 'front-end',
 }
 
 const rewrite = new Proxy(student, {
   set(target, property, value) {
-    
+    if (property in target) {
+      target[property] = value
+      return true
+    } else {
+      throw new Error(`Cannot rewrite not-existing '${property}'`)
+    }
   }
 })
+
+console.log(student); //original
+console.log(rewrite); //proxy
+
+rewrite.name = 'Dick' //work with proxy
+
+console.log(student); //original
+console.log(rewrite); //proxy
+console.log(rewrite === student); //compare original and proxy
