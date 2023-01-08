@@ -1,5 +1,15 @@
 const protect = (obj) => {
-  return new Proxy(obj)
+
+  const handlers = {
+    get: (target, prop) => {
+      if (prop.startsWith('_')) {
+        throw new Error('Error')
+      }
+        return target[prop]
+    }
+  }
+  
+  return new Proxy(obj, handlers)
 }
 
 
@@ -17,11 +27,11 @@ class Course {
 const course = new Course('Object-oriented design');
 const protectedCourse = protect(course);
  
-course.getName(); // "Object-oriented design"
-protectedCourse.getName(); // "Object-oriented design"
-course._name; // "Object-oriented design"
-course._nonExists; // undefined
+console.log(course.getName()); // "Object-oriented design"
+console.log(protectedCourse.getName()); // "Object-oriented design"
+console.log(course._name); // "Object-oriented design"
+console.log(course._nonExists); // undefined
  
-protectedCourse._name; // Error
-protectedCourse._name = 'OOD'; // Error
-protectedCourse._nonExists; // Error
+console.log(protectedCourse._name); // Error
+// protectedCourse._name = 'OOD'; // Error
+// protectedCourse._nonExists; // Error
