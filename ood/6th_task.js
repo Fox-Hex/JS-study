@@ -3,9 +3,20 @@ const protect = (obj) => {
   const handlers = {
     get: (target, prop) => {
       if (prop.startsWith('_')) {
-        throw new Error('Error')
+        throw 'Error'
       }
+      if (prop in target) {
         return target[prop]
+      } else {
+        throw 'Error'
+      }
+    },
+    set: (target, prop, value, receiver) => {
+      if (prop.startsWith('_')) {
+        throw 'Error'
+      }
+      target[prop] = value
+      return true
     }
   }
   
