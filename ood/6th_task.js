@@ -20,8 +20,10 @@ const protect = (obj) => {
       if (prop.startsWith('_')) {
         throw 'Error'
       }
-      target[prop] = value
-      return true
+      if (prop in target) {
+        target[prop] = value
+        return true
+      }
     }
   }
 
