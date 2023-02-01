@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import { map } from 'async'
 
 
 // const callback = (error, data) => {console.log(data);}
@@ -139,4 +140,60 @@ import path from 'path'
 //   })
 // }
 // unionFiles('./files/file1', './files/file2', './files/newfile', (error) => {console.log(error);})
+
+
+
+// const state = {
+//   count: 0,
+//   result: [],
+// }
+
+// const tryWrite = () => {
+//   if (state.count !== 2) {
+//     return
+//   }
+
+//   fs.writeFile('./files/newfile', state.result.join(''), (error3) => {
+//     if (error3) {
+//       return
+//     }
+//     console.log('finished!');
+//   })
+// }
+
+// console.log('first reading');
+// fs.readFile('./files/file2', 'utf-8', (error1, data1) => {
+//   console.log('first callback');
+//   if (error1) {
+//     return
+//   }
+//   state.count += 1
+//   state.result[0] = data1
+//   tryWrite()
+// })
+
+// console.log('second reading');
+// fs.readFile('./files/file1', 'utf-8', (error2, data2) => {
+//   console.log('second callback');
+//   if (error2) {
+//     return
+//   }
+//   state.count += 1
+//   state.result[1] = data2
+//   tryWrite()
+// })
+
+
+
+map(['./files/file1', './files/file2'], fs.readFile, (err1, result) => {
+  if (err1) {
+    return
+  }
+  fs.writeFile('./files/newfile', result.join(''), (err2) => {
+    if (err2) {
+      return
+    }
+    console.log('success!');
+  })
+})
 

@@ -2,9 +2,15 @@ import fs from 'fs'
 
 const move = (fileFrom, fileTo, cb) => {
   fs.readFile(fileFrom, 'utf-8', (errorRead, data) => {
-    cb(errorRead)
+    if (errorRead) {
+      cb(errorRead)
+      return
+    }
     fs.writeFile(fileTo, data, (errorWrite) => {
-      cb(errorWrite)
+      if (errorWrite) {
+        cb(errorWrite)
+        return
+      }
       fs.unlink(fileFrom, cb)
     })
   })
