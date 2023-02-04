@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
-import { map } from 'async'
+import async from 'async'
+import { clear } from 'console';
 
 
 // const callback = (error, data) => {console.log(data);}
@@ -185,15 +186,40 @@ import { map } from 'async'
 
 
 
-map(['./files/file1', './files/file2'], fs.readFile, (err1, result) => {
-  if (err1) {
-    return
-  }
-  fs.writeFile('./files/newfile', result.join(''), (err2) => {
-    if (err2) {
-      return
-    }
-    console.log('success!');
-  })
-})
+// async.map(['./files/file1', './files/file2'], fs.readFile, (err1, result) => {
+//   if (err1) {
+//     return
+//   }
+//   fs.writeFile('./files/newfile', result.join(''), (err2) => {
+//     if (err2) {
+//       return
+//     }
+//     console.log('success!');
+//   })
+// })
 
+
+
+// const f = (a) => {console.log(a);}
+// setTimeout(f, 300, 5)
+
+// const f = (a, b) => console.log(a + b);
+// setTimeout(() => f(1, 4), 500)
+
+// const f = (a, b) => console.log(a + b);
+// setTimeout(f.bind(null, 4, 7), 300)
+
+// const id = setInterval(() => console.log(new Date()), 200)
+// console.log(id);
+// setTimeout(() => { 
+//   clearInterval(id)
+// }, 1005)
+
+let counter = 0
+const id = setInterval(() => {
+  counter += 1
+  if (counter === 5) {
+    clearInterval(id)
+  }
+  console.log((new Date()).getHours(), ':', (new Date()).getMinutes(), ':', (new Date()).getSeconds(30));
+}, 1000)
