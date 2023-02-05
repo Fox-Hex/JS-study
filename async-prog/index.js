@@ -215,11 +215,25 @@ import { clear } from 'console';
 //   clearInterval(id)
 // }, 1005)
 
-let counter = 0
-const id = setInterval(() => {
-  counter += 1
-  if (counter === 5) {
-    clearInterval(id)
-  }
-  console.log((new Date()).getHours(), ':', (new Date()).getMinutes(), ':', (new Date()).getSeconds(30));
-}, 1000)
+// let counter = 0
+// const id = setInterval(() => {
+//   counter += 1
+//   if (counter === 5) {
+//     clearInterval(id)
+//   }
+//   console.log((new Date()).getHours(), ':', (new Date()).getMinutes(), ':', (new Date()).getSeconds(30));
+// }, 1000)
+// console.log(id);
+
+
+
+const { promises: fsp } = fs // rename fs.promises into fsp
+
+fs.promises.readFile('./files/file1', 'utf-8')
+  .then((data1) => console.log(data1))
+  .then(() => fs.promises.readFile('./files/file2', 'utf-8'))
+  .then((data2) => data2 + ' +something')
+  .then((text) => console.log(text))
+
+
+
