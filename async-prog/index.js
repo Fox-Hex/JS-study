@@ -227,13 +227,46 @@ import { clear } from 'console';
 
 
 
-const { promises: fsp } = fs // rename fs.promises into fsp
+// const { promises: fsp } = fs // rename fs.promises into fsp
 
-fs.promises.readFile('./files/file1', 'utf-8')
-  .then((data1) => console.log(data1))
-  .then(() => fs.promises.readFile('./files/file2', 'utf-8'))
-  .then((data2) => data2 + ' +something')
-  .then((text) => console.log(text))
+// fs.promises.readFile('./files/file1', 'utf-8')
+//   .then((data1) => console.log(data1))
+//   .then(() => fs.promises.readFile('./files/file2', 'utf-8'))
+//   .then((data2) => data2 + ' +something')
+//   .then((text) => console.log(text))
 
 
+
+// const promise = fs.promises.readFile('undef')
+// promise.catch((e) => console.log('error', e))
+
+// fs.promises.readFile('undef')
+//   .catch(() => console.log('error1'))
+//   .then(() => fs.promises.readFile('undef2'))
+//   .catch(() => console.log('error2'))
+
+// fs.promises.readFile('undef1')
+//   .then(() => fs.promises.readFile('undef2'))
+//   .catch(() => console.log('errr'))
+
+// const promis = fs.promises.readFile('undef')
+//   .then((data) => {
+//     throw new Error('boom!')
+//   })
+//   .then(() => {
+//     console.log('cant');
+//   })
+//   .catch(() => console.log('error'))
+
+// const promis = fs.promises.readFile('undef')
+//   .then((data) => {
+//     return Promise.reject(new Error())
+//   })
+//   .catch(() => console.log('error'))
+
+// const readFileEasily = (filepath) => fs.promises.readFile(filepath)
+//   .catch((e) => {
+//     throw e
+//   })
+// readFileEasily('undef')
 
