@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import async from 'async'
+// import async from 'async'
 import { clear } from 'console';
 
 
@@ -269,4 +269,28 @@ import { clear } from 'console';
 //     throw e
 //   })
 // readFileEasily('undef')
+
+
+
+// const unionFiles = (path1, path2, outpath) => {
+//   const result = fs.promises.readFile(path1, 'utf-8')
+//     .then((data1) => {
+//       const promise = fs.promises.readFile(path2, 'utf-8')
+//         .then((data2) => fs.promises.writeFile(outpath, data1+data2))
+//       return promise
+//     })
+//   return result
+// }
+// unionFiles('./files/file', './files/file2', './files/newfile').catch(() => console.log('fail'))
+
+
+const unionFiles2 = (path1, path2, outpath) => {
+  let data1
+  const result = fs.promises.readFile(path1)
+    .then((content) => data1 = content)
+    .then(fs.promises.readFile(path2))
+    .then((data2) => fs.promises.writeFile(outpath, data1+data2))
+  return result
+}
+unionFiles2('./files/file1', './files/file2', './files/newfile').catch(() => console.log('err'))
 
