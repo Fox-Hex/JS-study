@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 // import async from 'async'
 import { clear } from 'console';
+import fsp from 'fs/promises'
 
 
 // const callback = (error, data) => {console.log(data);}
@@ -284,13 +285,54 @@ import { clear } from 'console';
 // unionFiles('./files/file', './files/file2', './files/newfile').catch(() => console.log('fail'))
 
 
-const unionFiles2 = (path1, path2, outpath) => {
-  let data1
-  const result = fs.promises.readFile(path1)
-    .then((content) => data1 = content)
-    .then(fs.promises.readFile(path2))
-    .then((data2) => fs.promises.writeFile(outpath, data1+data2))
-  return result
-}
-unionFiles2('./files/file1', './files/file2', './files/newfile').catch(() => console.log('err'))
+// const unionFiles2 = (path1, path2, outpath) => {
+//   let data1
+//   const result = fs.promises.readFile(path1)
+//     .then((content) => data1 = content)
+//     .then(fs.promises.readFile(path2))
+//     .then((data2) => fs.promises.writeFile(outpath, data1+data2))
+//   return result
+// }
+// unionFiles2('./files/file1', './files/file2', './files/newfile').catch(() => console.log('err'))
 
+
+
+// const filePaths = ['./files/file1', './files/file2', './files/file3']
+
+// const initPromise = Promise.resolve([])
+
+// const promise = filePaths.reduce((acc, path) => {
+//   const newAcc = acc.then((contents) =>
+//     fs.promises.readFile(path, 'utf-8')
+//     .then((data) => contents.concat(data)))
+//   return newAcc
+// }, initPromise)
+
+// promise.then((contents) => console.log(contents))
+
+
+
+// const unionFiles = (inputPath1, inputPath2, outputPath) => {
+//   const promise1 = fsp.readFile(inputPath1, 'utf-8')
+//   const promise2 = fsp.readFile(inputPath2, 'utf-8')
+//   const promise = Promise.all([promise1, promise2])
+//     .then(([data1, data2]) => fsp.writeFile(outputPath, data1+data2))
+  
+//   return promise
+// }
+// unionFiles('./files/file1', './files/file2', './files/newfile').then(console.log)
+
+
+
+// const filePaths = ['./files/file1', './files/file2', './files/file3']
+// const promises = filePaths.map((elem) => fsp.readFile(elem, 'utf-8'))
+// const promise = Promise.all(promises)
+// promise.then((data) => data.map(console.log))
+
+
+const filePaths = ["./files/file", "./files/file2", "./files/file3"]
+const promises = filePaths.map((elem) => fsp.readFile(elem, "utf-8")
+  .then((v) => ({ result: "success", value: v }))
+  .catch((e) => ({ result: "error", error: e.errno })))
+const promise = Promise.all(promises)
+promise.then(console.log)
