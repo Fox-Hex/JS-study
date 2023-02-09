@@ -330,9 +330,14 @@ import fsp from 'fs/promises'
 // promise.then((data) => data.map(console.log))
 
 
-const filePaths = ["./files/file", "./files/file2", "./files/file3"]
-const promises = filePaths.map((elem) => fsp.readFile(elem, "utf-8")
-  .then((v) => ({ result: "success", value: v }))
-  .catch((e) => ({ result: "error", error: e.errno })))
-const promise = Promise.all(promises)
-promise.then(console.log)
+// const filePaths = ["./files/file", "./files/file2", "./files/file3"]
+// const promises = filePaths.map((elem) => fsp.readFile(elem, "utf-8")
+//   .then((v) => ({ result: "success", filename: v }))
+//   .catch((e) => ({ result: "error", error: e.errno })))
+// const promise = Promise.all(promises)
+// promise.then(console.log)
+
+
+
+
+
