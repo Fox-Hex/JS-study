@@ -3,6 +3,8 @@ import path from 'path'
 // import async from 'async'
 import { clear } from 'console';
 import fsp from 'fs/promises'
+import util from 'util'
+import axios from 'axios'
 
 
 // const callback = (error, data) => {console.log(data);}
@@ -339,5 +341,69 @@ import fsp from 'fs/promises'
 
 
 
+// const promise = new Promise((resolve, reject) => {
+//   fs.readFile('./files/fiдe1', (err, data) => {
+//     if (err) {
+//       reject(err)
+//       return
+//     }
+//     resolve(data)
+//   })
+// })
+// promise.then(console.log).catch(console.log)
 
 
+
+// const stat = util.promisify(fs.stat)
+// stat('./files/file2')
+//   .then((data) => console.log(data.size))
+//   .catch(console.log)
+
+
+
+// const prom = new Promise((resolve, reject) => resolve('yes'))
+// prom.then(console.log)
+
+
+
+// const unionFiles3 = async (path1, path2, outpath) => {
+//   try {
+//     const data1 = await fsp.readFile(path1, 'utf-8')
+//     const data2 = await fsp.readFile(path2, 'utf-8')
+//     await fsp.writeFile(outpath, data1 + data2)
+//   } catch (e) {
+//     throw e
+//   }
+// }
+// unionFiles3('./files/file1', './files/file2', './files/newfile')
+
+
+
+// const unionFiles4 = async (path1, path2, out) => {
+//   const prom1 = fsp.readFile(path1, 'utf-8')
+//   const prom2 = fsp.readFile(path2, 'utf-8')
+
+//   const [data1, data2] = await Promise.all([prom1, prom2])
+
+//   await fsp.writeFile(out, data1 + data2)
+// }
+// unionFiles4('./files/file1', './files/file2', './files/newfile')
+
+
+
+// const fn = async () => {
+//   const response = await axios.get('https://ru.hexlet.io')
+//   console.log(response.status);
+// }
+// fn()
+
+
+
+// const fn = async () => {
+//   const data = {
+//     email: 'vasya@pupkin.ru',
+//     firstName: 'Vasya',
+//   }
+//   const response = await axios.post('https://ru.hexlet.io', data)
+// }
+// fn()
