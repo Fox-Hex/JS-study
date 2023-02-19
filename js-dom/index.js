@@ -36,9 +36,9 @@
 // console.log(document.body instanceof HTMLBodyElement)
 
 
-const node = document.documentElement
-console.log(node.children)
-console.log(node.childNodes)
+// const node = document.documentElement
+// console.log(node.children)
+// console.log(node.childNodes)
 
-const table = document.body.firstElementChild
-console.log(table.rows[0].cells[2]);
+// const table = document.body.firstElementChild
+// console.log(table.rows[0].cells[2]);
