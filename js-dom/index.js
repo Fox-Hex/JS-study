@@ -132,12 +132,38 @@
 
 
 
-const allLinks = document.querySelectorAll('[data-toggle="tab"]')
+// const allLinks = document.querySelectorAll('[data-toggle="tab"]')
 
-allLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    const activeElement = link.closest('.nav').querySelector('.active')
-    activeElement.classList.remove('active')
-    link.classList.add('active')
-  })
+// allLinks.forEach((link) => {
+//   link.addEventListener('click', () => {
+//     const activeElement = link.closest('.nav').querySelector('.active')
+//     activeElement.classList.remove('active')
+//     link.classList.add('active')
+//   })
+// })
+
+
+
+
+const form = document.querySelector('form')
+console.log(form.elements);
+form.elements.password.addEventListener('click', () => console.log('pass?'))
+
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault()
+  const data = new FormData(event.target)
+  console.log(data.get('email'));
+  console.log([...data.values()]);
+  console.log([...data.entries()]);
+
+  const obj = Object.fromEntries(data)
+  console.log(obj);
 })
+
+const inputEmail = document.querySelector('[name="email"]')
+inputEmail.addEventListener('input', (event) => {
+  const text = new FormData(form)
+  console.log(text.get('email'))
+})
+
