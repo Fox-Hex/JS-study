@@ -145,25 +145,45 @@
 
 
 
-const form = document.querySelector('form')
-console.log(form.elements);
-form.elements.password.addEventListener('click', () => console.log('pass?'))
+// const form = document.querySelector('form')
+// console.log(form.elements);
+// form.elements.password.addEventListener('click', () => console.log('pass?'))
 
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault()
-  const data = new FormData(event.target)
-  console.log(data.get('email'));
-  console.log([...data.values()]);
-  console.log([...data.entries()]);
+// form.addEventListener('submit', (event) => {
+//   event.preventDefault()
+//   const data = new FormData(event.target)
+//   console.log(data.get('email'));
+//   console.log([...data.values()]);
+//   console.log([...data.entries()]);
 
-  const obj = Object.fromEntries(data)
-  console.log(obj);
-})
+//   const obj = Object.fromEntries(data)
+//   console.log(obj);
+// })
 
-const inputEmail = document.querySelector('[name="email"]')
-inputEmail.addEventListener('input', (event) => {
-  const text = new FormData(form)
-  console.log(text.get('email'))
-})
+// const inputEmail = document.querySelector('[name="email"]')
+// inputEmail.addEventListener('input', (event) => {
+//   const text = new FormData(form)
+//   console.log(text.get('email'))
+// })
+
+
+
+// fetch('./155.json')
+//   .then((response) => {
+//     console.log(response.status);
+//     console.log(response.headers.get('content-type'));
+//     return response.json()
+//   })
+//   .then((article) => {
+//     console.log(article.name);
+//   })
+//   .catch(console.error)
+
+
+// const form = document.querySelector('form')
+// fetch('./155.json', {
+//   method: 'POST',
+//   body: new FormData(form),
+// })
 
