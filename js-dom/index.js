@@ -187,3 +187,46 @@
 //   body: new FormData(form),
 // })
 
+
+
+
+// const item = $('span')
+// console.log(item);
+
+// const button = $('button')
+// button.click(() => {
+//   $('span').attr('href', 'index.html')
+//   $('span').hover(() => console.log('over'))
+// })
+
+// $('div').hide()
+// $('div').show()
+
+// item.addClass('headder')
+
+// const link = $('#site')
+// console.log(link.html())
+// link.html('click here!!!!')
+// link.attr('href', 'new111.com')
+// console.log(link.attr('href'))
+
+
+
+
+// const jqxhr = $.get('155.json', (data) => {
+//   console.log(data);
+// })
+//   .done(() => console.log('success'))
+//   .fail(() => console.log('fail'))
+//   .always(() => console.log('finished'))
+
+
+
+$('#clickme').click(() => {
+  const book = $('#book')
+  if (book.attr('style') === 'display: none;') {
+    book.show('slow', () => console.log('visible!'))
+  } else {
+    book.hide(2000, () => console.log('hidden!'))
+  }
+})
