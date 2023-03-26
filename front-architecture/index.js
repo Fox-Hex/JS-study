@@ -7,4 +7,11 @@ const app = () => {
   })
 }
 
+const articleCount = () => {
+  const articles = document.querySelectorAll('.article')
+  return articles.length
+}
+
+
 app()
+document.querySelector('#articleCount').innerHTML = `count of articles: ${articleCount()}`
