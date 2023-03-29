@@ -21,10 +21,13 @@
 //   form.reset()
 // })
 
-const b = async () => {
+const path = 'https://web-js-frontend-architecture-complex-state-5250612.evaluator2-5.hexlet.io/api/tasks'
 
-  const a = await axios.get('files/tasks')
-  console.log(a.data);
+const b = async () => {
+  const resp1 = await axios.get(path)
+  resp1.data.items.push({name: 'task2'})
+
+  const resp2 = await axios.post(path, resp1.data)
 }
 
 b()
