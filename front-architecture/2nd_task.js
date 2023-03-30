@@ -21,13 +21,33 @@
 //   form.reset()
 // })
 
-const path = 'https://web-js-frontend-architecture-complex-state-5250612.evaluator2-5.hexlet.io/api/tasks'
 
-const b = async () => {
-  const resp1 = await axios.get(path)
-  resp1.data.items.push({name: 'task2'})
+const app = async () => {
+  const path = 'https://web-js-frontend-architecture-complex-state-5250612.evaluator2-5.hexlet.io/api/tasks'
+  const form = document.querySelector('form')
+  const field = document.querySelector('input')
 
-  const resp2 = await axios.post(path, resp1.data)
+  const readData = async () => {
+    const resp1 = await axios.get(path)
+    const ul = document.querySelector('ul')
+    ul.innerHTML = ''
+    resp1.data.items.forEach((elem) => {
+      const li = document.createElement('li')
+      li.append(elem.name)
+      ul.append(li)
+    })   
+  }
+
+  field.focus()
+
+  addEventListener('DOMContentLoaded', readData())
+
+  form.addEventListener('submit', async (e) => {
+    // e.preventDefault()
+    const resp2 = await axios.post(path, {name: field.value})
+    readData()
+    // form.reset()
+  })
 }
 
-b()
+app()
