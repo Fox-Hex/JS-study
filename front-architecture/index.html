@@ -5,17 +5,33 @@
   <meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js" defer></script>
 </head>
 
 <body>
   <div class="container m-3">
-    <div data-editable-target="name">
-      <i>name</i>
-    </div>
-    <div data-editable-target="email">
-      <i>email</i>
+    <div class="row">
+      <div class="col">
+        <h3>Lists</h3>
+        <form class="form-inline mb-2" data-container="new-list-form">
+          <label for="new-list-name" class="sr-only">New list name</label>
+          <input type="text" id="new-list-name" class="form-control mr-2" name="name" required>
+          <input type="submit" class="btn btn-primary" value="Add List">
+        </form>
+        <div data-container="lists"></div>
+      </div>
+      <div class="col">
+        <h3>Tasks</h3>
+        <form class="form-inline mb-2" data-container="new-task-form">
+          <label for="new-task-name" class="sr-only">New task name</label>
+          <input type="text" id="new-task-name" class="form-control mr-2" name="name" required>
+          <input type="submit" class="btn btn-primary" value="Add Task">
+        </form>
+        <div data-container="tasks"></div>
+      </div>
     </div>
   </div>
-  <script src="5th_task.js" defer></script>
+  <script src="6th_task.js" defer></script>
 </body>
+
 </html>
