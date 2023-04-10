@@ -17,38 +17,38 @@
 // document.querySelector('#articleCount').innerHTML = `count of articles: ${articleCount()}`
 
 
-const app = () => {
-  const state = {
-    registrationForm: {
-      valid: null,
-      errors: [],
-    },
-  };
+// const app = () => {
+//   const state = {
+//     registrationForm: {
+//       valid: null,
+//       errors: [],
+//     },
+//   };
   
-  const input = document.querySelector(".phone");
-  const submit = document.querySelector(".submit");
+//   const input = document.querySelector(".phone");
+//   const submit = document.querySelector(".submit");
   
-  input.addEventListener("keyup", (e) => {
-    const inputValue = e.target.value;
+//   input.addEventListener("keyup", (e) => {
+//     const inputValue = e.target.value;
   
-    state.registrationForm.value = inputValue;
+//     state.registrationForm.value = inputValue;
   
-    if (inputValue.match(/^\d+$/)) {
-      state.registrationForm.valid = true;
-      state.registrationForm.errors = [];
-    } else {
-      state.registrationForm.valid = false;
-      state.registrationForm.errors.push("wrong format");
-    }
+//     if (inputValue.match(/^\d+$/)) {
+//       state.registrationForm.valid = true;
+//       state.registrationForm.errors = [];
+//     } else {
+//       state.registrationForm.valid = false;
+//       state.registrationForm.errors.push("wrong format");
+//     }
   
-    submit.disabled = !state.registrationForm.valid;
+//     submit.disabled = !state.registrationForm.valid;
   
-    if (state.registrationForm.valid) {
-      input.style.border = null;
-    } else {
-      input.style.border = "thick solid red";
-    }
-  });  
-}
+//     if (state.registrationForm.valid) {
+//       input.style.border = null;
+//     } else {
+//       input.style.border = "thick solid red";
+//     }
+//   });  
+// }
 
-app()
+// app()
