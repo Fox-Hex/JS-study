@@ -52,3 +52,36 @@
 // }
 
 // app()
+
+
+
+// const app = () => {
+//   const state = {
+//     value: 0
+//   }
+
+//   const result = document.querySelector('#result')
+
+//   const render = (path, value) => {
+//     result.textContent = value
+//   }
+
+//   const watchedState = onChange(state, render)
+
+//   const incHandler = () => {
+//     watchedState.value += 1
+//   }
+
+//   const decHandler = () => {
+//     watchedState.value -= 1
+//   }
+
+//   const inc = document.querySelector('#increment')
+//   inc.addEventListener('click', incHandler)
+
+//   const dec = document.querySelector('#increment')
+//   dec.addEventListener('click', decHandler)
+
+// }
+
+// app()
