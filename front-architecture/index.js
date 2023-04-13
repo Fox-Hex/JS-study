@@ -54,6 +54,7 @@
 // app()
 
 
+// import onChange from "./src/on-change.js"
 
 // const app = () => {
 //   const state = {
@@ -79,7 +80,7 @@
 //   const inc = document.querySelector('#increment')
 //   inc.addEventListener('click', incHandler)
 
-//   const dec = document.querySelector('#increment')
+//   const dec = document.querySelector('#decrement')
 //   dec.addEventListener('click', decHandler)
 
 // }
