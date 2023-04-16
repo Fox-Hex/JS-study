@@ -86,3 +86,51 @@
 // }
 
 // app()
+
+
+
+
+// const form = document.querySelector('form')
+// form.addEventListener('submit', (e) => {
+//   e.preventDefault()
+//   const formData = new FormData(e.target)
+// })
+
+
+
+
+import onChange from "./src/on-change.js"
+
+// Model
+const state = {
+  regForm: {
+    state: 'valid',
+    data: {
+      name: '',
+      email: '',
+    },
+    errors: []
+  }
+}
+
+// View
+const name = document.querySelector('#name')
+const email = document.querySelector('#email')
+const watchedState = onChange(state, (path, value) => {
+  if (path === 'regForm.state') {
+    if (value === 'invalid') {
+      console.log(state.regForm.errors);
+    }
+  }
+  name.innerHTML = `name: ${state.regForm.data.name}`
+  email.innerHTML = `email: ${state.regForm.data.email}`
+})
+
+// Control
+const form = document.querySelector('form')
+form.elements.name.addEventListener('input', (e) => {
+  watchedState.regForm.data.name = e.target.value
+})
+form.elements.email.addEventListener('input', (e) => {
+  watchedState.regForm.data.email = e.target.value
+})
