@@ -1,3 +1,1 @@
-import read from '../__tests__/read.test.js';
-
-test()
+import read from '../src/read.js';
