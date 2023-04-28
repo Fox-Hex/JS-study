@@ -136,36 +136,36 @@
 // })
 
 
-import i18next from 'https://deno.land/x/i18next/index.js'
+// import i18next from 'https://deno.land/x/i18next/index.js'
 
-const app = async () => {
-  await i18next.init({
-    lng: 'ru',
-    debug: true,
-    resources: {
-      ru: {
-        translation: {
-          greeting: 'Привет! {{name}}',
-          goodbye: 'Пока!',
-          signupForm: {
-            name: 'Вася',
-            email: 'vasya@noproblem.ru'
-          },
-          key_one: '{{count}} балл',
-          key_few: '{{count}} балла',
-          key_many: '{{count}} баллов',
-        }
-      }
-    }
-  })
+// const app = async () => {
+//   await i18next.init({
+//     lng: 'ru',
+//     debug: true,
+//     resources: {
+//       ru: {
+//         translation: {
+//           greeting: 'Привет! {{name}}',
+//           goodbye: 'Пока!',
+//           signupForm: {
+//             name: 'Вася',
+//             email: 'vasya@noproblem.ru'
+//           },
+//           key_one: '{{count}} балл',
+//           key_few: '{{count}} балла',
+//           key_many: '{{count}} баллов',
+//         }
+//       }
+//     }
+//   })
 
-  console.log(i18next.t('greeting', {name: 'юзер'}));
-  console.log(i18next.t('goodbye'));
-  console.log(i18next.t('signupForm.name'));
-  console.log(i18next.t('signupForm.email'));
-  console.log(i18next.t('key', {count: 1}));
-  console.log(i18next.t('key', {count: 2}));
-  console.log(i18next.t('key', {count: 256}));
-}
+//   console.log(i18next.t('greeting', {name: 'юзер'}));
+//   console.log(i18next.t('goodbye'));
+//   console.log(i18next.t('signupForm.name'));
+//   console.log(i18next.t('signupForm.email'));
+//   console.log(i18next.t('key', {count: 1}));
+//   console.log(i18next.t('key', {count: 2}));
+//   console.log(i18next.t('key', {count: 256}));
+// }
 
-app()
+// app()

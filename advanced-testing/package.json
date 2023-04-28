@@ -11,5 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "papaparse": "^5.4.1"
   }
 }
