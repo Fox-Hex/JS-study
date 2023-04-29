@@ -13,6 +13,7 @@
     "jest": "^29.5.0"
   },
   "dependencies": {
+    "fakerator": "^0.3.6",
     "papaparse": "^5.4.1"
   }
 }
