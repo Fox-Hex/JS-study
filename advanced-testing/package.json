@@ -14,6 +14,10 @@
   },
   "dependencies": {
     "fakerator": "^0.3.6",
-    "papaparse": "^5.4.1"
+    "klaw-sync": "^6.0.0",
+    "lodash": "^4.17.21",
+    "papaparse": "^5.4.1",
+    "prettier": "^2.8.8",
+    "winston": "^3.8.2"
   }
 }
