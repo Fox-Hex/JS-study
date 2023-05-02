@@ -1,7 +1,10 @@
-import OctokitFake from '../support/octokitFake.js'
-import getFunction from '../src/6th_task.js'
+import nock from 'nock';
+import getFunction from '../src/7th_task.js';
 
 const getUserMainLanguage = Object.values(getFunction)
+
+nock.disableNetConnect();
+
 const data = [
   { language: 'php'},
   { language: 'javascript'},
@@ -11,12 +14,13 @@ const data = [
   { language: 'javascript'},
 ]
 
-const client = new OctokitFake(data)
-const clientEmpty = new OctokitFake([])
-
 test.each(getUserMainLanguage)('%p', async (func) => {
-  const language = await func('Fox-Hex', client)
-  const languageEmpty = await func('Fox-Hex', clientEmpty)
+  nock(/api\.github\.com/)
+    .get(/\/users\/Fox-Hex\/repos/)
+    .reply(200, data)
+  const language = await func('Fox-Hex')
   expect(language).toEqual('javascript')
-  expect(languageEmpty).toBeNull()
 })
+
+
+// https://api.github.com/users/Fox-Hex/repos
