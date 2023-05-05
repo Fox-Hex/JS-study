@@ -1,5 +1,8 @@
-import _ from 'lodash'
+const dbSettingsEnv = {
+  dev: { adapter: 'sqlite' },
+  prod: { adapter: 'postgresql'}
+}
 
-const a = _.concat(['one'], ['two', 'three'])
-console.log(a);
+const dbConfig = dbSettingsEnv['prod'] ?? { adapter: 'memory'}
+console.log(dbConfig);
 
