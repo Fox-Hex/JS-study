@@ -13,14 +13,20 @@ class Node {
   }
 }
 
-const list = new Node(1, new Node(2, new Node(3)))
-console.log(list.getNext().getNext().getValue());
+const list1 = new Node(1)
+const list2 = new Node(1, new Node(2, new Node(3)))
 
 const reverse = (list) => {
-  return new Node(
-    list.getNext() ? reverse(list.getNext()) : list.getValue(),
-    reverse(list.getNext())
-  )
+  let reversedList = null
+  let currentList = list
+
+  while (currentList) {
+    reversedList = new Node(currentList.getValue(), reversedList)
+    currentList = currentList.getNext()
+  }
+
+  return reversedList
 }
 
-console.log(reverse(list));
+console.log(reverse(list1));
+console.log(reverse(list2));
