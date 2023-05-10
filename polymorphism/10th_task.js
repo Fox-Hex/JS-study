@@ -46,8 +46,12 @@ class ConfigFactory {
 }
 
 
-const filePath = path.join('__fixtures__', 'test.yml')
+const dirname = path.dirname(fileURLToPath(import.meta.url))
+const filePath = path.join(dirname, '__fixtures__', 'test.yml')
+
 const config = ConfigFactory.factory(filePath)
 console.log(config);
 console.log(config.getValue('key')); // value
 console.log(config.constructor.name); // Config
+
+import { fileURLToPath } from 'url';
