@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'url';
 import yaml from 'js-yaml';
 import path from 'path';
 import fs from 'fs';
@@ -53,5 +54,3 @@ const config = ConfigFactory.factory(filePath)
 console.log(config);
 console.log(config.getValue('key')); // value
 console.log(config.constructor.name); // Config
-
-import { fileURLToPath } from 'url';
