@@ -11,7 +11,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}/polymorphism/12th_task.js"
+      "program": "${workspaceFolder}/polymorphism/13th_task.js"
     }
   ]
 }
