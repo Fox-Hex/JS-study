@@ -13,10 +13,12 @@ class TcpConnection {
   }
 
   connect() {
+    this.state.connect()
     this.state = new this.stateTypes.Connected
   }
 
   disconnect() {
+    this.state.disconnect()
     this.state = new this.stateTypes.Disconnected
   }
 
@@ -30,12 +32,11 @@ class TcpConnection {
 }
 
 
-// На вход принимаются ip-адрес и порт
 const connection = new TcpConnection('132.223.243.88', 2342);
 connection.connect();
+// connection.connect(); // Boom!
 console.log(connection.getCurrentState()); // connected
 connection.write('data');
 connection.disconnect();
 console.log(connection.getCurrentState()); // disconnected
-// Выбрасывает исключение если нет соединения
-console.log(connection.disconnect()); // Boom!
+// connection.disconnect(); // Boom!
