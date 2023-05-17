@@ -122,3 +122,126 @@ import ReactDOM from 'react-dom/client';
 
 // const root = ReactDOM.createRoot(document.getElementById('container'));
 // root.render(<DefinitionsList data={definitions} />);
+
+
+
+
+// task 5
+//
+// import Progress from './tasks/5th_task.jsx'
+
+// const root = ReactDOM.createRoot(document.getElementById('container'));
+// root.render(<Progress percentage={65} />);
+
+
+
+
+// class Button extends React.Component {
+//   render() {
+//     const { isPressed, isHovered, label } = this.props;
+//     let btnClass = 'btn'
+//     if (isPressed) {
+//       btnClass += ' btn-pressed'
+//     } else if (isHovered) {
+//       btnClass += ' btn-over'
+//     }
+//     return <button className={btnClass}>{label}</button>
+//   }
+// }
+// const root = ReactDOM.createRoot(document.getElementById('container'));
+// root.render(<Button label='simple button' isHovered/>);
+
+
+
+// import cn from 'classnames'
+
+// class Button extends React.Component {
+//   render() {
+//     const { isDark, isPressed, isHovered, label } = this.props;
+//     const btnClass = cn('btn', {
+//       'btn-pressed': isPressed,
+//       'btn-over': !isPressed && isHovered,
+//       'btn-dark': isDark
+//     })
+//     return <button className={btnClass}>{label}</button>
+//   }
+// }
+
+// const root = ReactDOM.createRoot(document.getElementById('container'));
+// root.render(<Button label='simple button' isHovered isDark/>);
+
+
+
+
+// // 6 task
+// //
+// import Alert from './tasks/6th_task.jsx'
+
+// const root = ReactDOM.createRoot(document.getElementById('container'));
+// root.render(<Alert type="primary" text="what is love?" />);
+
+
+
+
+
+// class Alert extends React.Component {
+//   render() {
+//     const { children } = this.props;
+//     return (<div className="alert alert-primary">
+//       {children}
+//     </div>);
+//   }
+// }
+// const root = ReactDOM.createRoot(document.getElementById('container'));
+// const vdom = <Alert>
+//   <p>Aww yeah, you successfully read this important alert message.
+//     This example text is going to run a bit longer so that you can
+//     see how spacing within an alert works with this kind of content.</p>
+//   <hr />
+//   <p class="mb-0">Whenever you need to, be sure to use margin utilities
+//     to keep things nice and tidy.</p>
+// </Alert>
+// root.render(vdom);
+
+
+// class Counter extends React.Component {
+//   render() {
+//     const {children} = this.props
+//     return <p>children count = {React.Children.count(children)}</p>
+//   }
+// }
+
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// const vdom = <Counter>
+//   <div></div>
+//   <div></div>
+//   <div></div>
+// </Counter>
+// root.render(vdom)
+
+
+
+
+
+// 7 task
+//
+import ListGroup from './tasks/7th_task.jsx'
+
+const root = ReactDOM.createRoot(document.getElementById('container'));
+const vdom =
+  <ListGroup>
+    <p>one</p>
+    <p>two</p>
+  </ListGroup>;
+
+root.render(vdom);
+
+
+
+
+
+
+
+
+
+
