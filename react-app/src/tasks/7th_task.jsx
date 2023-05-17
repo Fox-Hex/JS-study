@@ -1,5 +1,4 @@
 import React from "react"
-import cn from 'classnames';
 
 
 class ListGroup extends React.Component {
@@ -7,7 +6,9 @@ class ListGroup extends React.Component {
     const { children } = this.props
     return (
       <ul className="list-group">
-        {React.Children.map(children, (elem) => {})}
+        {React.Children.map(children, (elem) => {
+          return <li className="list-group-item">{elem}</li>
+        })}
       </ul>
     )
   }
