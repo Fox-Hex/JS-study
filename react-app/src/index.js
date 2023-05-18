@@ -239,84 +239,92 @@ import cn from 'classnames'
 
 
 
+// class Clock extends React.Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = { date: new Date() }
+//   }
+//   handleCLick = () => {
+//     this.setState({ date: new Date() })
+//   }
+//   render() {
+//     return (
+//       <div>
+//         <p>
+//           {this.state.date.toLocaleTimeString()}
+//         </p>
+//         <button onClick={this.handleCLick}>
+//           Refresh
+//         </button>
+//       </div>
+//     )
+//   }
+// }
+
+// class Counter extends React.Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = { count: props.count }
+//   }
+//   handleCLick = () => {
+//     this.setState((state, props) => {
+//       const {count} = state
+//       return {count: count+1}
+//     })
+//   }
+//   render() {
+//     return (
+//       <button onClick={this.handleCLick}>
+//         Count: {this.state.count}
+//       </button>
+//     )
+//   }
+// }
+// Counter.defaultProps = { count: 10 }
+
+// class Buttons extends React.Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {count: 1, primary: false}
+//   }
+
+//   changeButton = () => {
+//     this.setState(({count}) => ({count: count + 1}))
+//     this.setState(({primary}) => ({primary: !primary}))
+//   }
+
+//   render() {
+//     const buttonClass = cn([
+//       'btn',
+//       this.state.primary ? 'btn-primary' : 'btn-secondary'
+//     ])
+//     return (
+//       <div>
+//         <button className={buttonClass} onClick={this.changeButton}>
+//           count: {this.state.count}
+//         </button>
+//       </div>
+//     )
+//   }
+// }
+
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render([
+//   <Clock />,
+//   <hr></hr>,
+//   <Counter />,
+//   <hr></hr>,
+//   <Buttons />,
+// ])
 
 
-class Clock extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { date: new Date() }
-  }
-  handleCLick = () => {
-    this.setState({ date: new Date() })
-  }
-  render() {
-    return (
-      <div>
-        <p>
-          {this.state.date.toLocaleTimeString()}
-        </p>
-        <button onClick={this.handleCLick}>
-          Refresh
-        </button>
-      </div>
-    )
-  }
-}
 
-class Counter extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { count: props.count }
-  }
-  handleCLick = () => {
-    this.setState((state, props) => {
-      const {count} = state
-      return {count: count+1}
-    })
-  }
-  render() {
-    return (
-      <button onClick={this.handleCLick}>
-        Count: {this.state.count}
-      </button>
-    )
-  }
-}
-Counter.defaultProps = { count: 10 }
 
-class Buttons extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {count: 1, primary: false}
-  }
+// task 8
+//
 
-  changeButton = () => {
-    this.setState(({count}) => ({count: count + 1}))
-    this.setState(({primary}) => ({primary: !primary}))
-  }
-
-  render() {
-    const buttonClass = cn([
-      'btn',
-      this.state.primary ? 'btn-primary' : 'btn-secondary'
-    ])
-    return (
-      <div>
-        <button className={buttonClass} onClick={this.changeButton}>
-          count: {this.state.count}
-        </button>
-      </div>
-    )
-  }
-}
+import BtnGroup from './tasks/8th_task.jsx'
 
 const root = ReactDOM.createRoot(document.getElementById('container'))
-root.render([
-  <Clock />,
-  <hr></hr>,
-  <Counter />,
-  <hr></hr>,
-  <Buttons />,
-])
-
+root.render(<BtnGroup />)
 
