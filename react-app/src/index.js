@@ -322,9 +322,22 @@ import cn from 'classnames'
 
 // task 8
 //
+// import BtnGroup from './tasks/8th_task.jsx'
 
-import BtnGroup from './tasks/8th_task.jsx'
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render(<BtnGroup />)
+
+
+
+class Button extends React.Component {
+  render() {
+    return (
+      <button type='btn' className='btn btn-warning' onClick={(e) => console.log(e.target.className)}>
+        click
+      </button>
+    )
+  }
+}
 
 const root = ReactDOM.createRoot(document.getElementById('container'))
-root.render(<BtnGroup />)
-
+root.render(<Button />)
