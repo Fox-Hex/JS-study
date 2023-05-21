@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import cn from 'classnames'
+// import cn from 'classnames'
 
 // task 2
 //
@@ -320,8 +320,8 @@ import cn from 'classnames'
 
 
 
-// task 8
-//
+// // task 8
+// //
 // import BtnGroup from './tasks/8th_task.jsx'
 
 // const root = ReactDOM.createRoot(document.getElementById('container'))
@@ -329,15 +329,75 @@ import cn from 'classnames'
 
 
 
-class Button extends React.Component {
-  render() {
-    return (
-      <button type='btn' className='btn btn-warning' onClick={(e) => console.log(e.target.className)}>
-        click
-      </button>
-    )
-  }
-}
 
-const root = ReactDOM.createRoot(document.getElementById('container'))
-root.render(<Button />)
+
+// class Button extends React.Component {
+//   render() {
+//     return (
+//       <button type='btn' className='btn btn-warning' onClick={(e) => console.log(e.target.className)}>
+//         click
+//       </button>
+//     )
+//   }
+// }
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render(<Button />)
+
+
+
+
+
+
+// // task 9
+// //
+// import Carousel from './tasks/9th_task.jsx'
+
+// const images = ['/images/first.jpeg', '/images/second.jpeg', '/images/third.jpeg'];
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render(<Carousel images={images} />)
+
+
+
+
+
+// class ShowButton extends React.Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {shownState: 'hidden'}
+//   }
+
+//   toggleText = () => {
+//     const {shownState} = this.state
+//     this.setState({shownState: shownState === 'hidden' ? 'shown' : 'hidden'})
+//   }
+
+//   render() {
+//     const {shownState} = this.state
+//     const contentToShow = (shownState === 'shown') ? <p>&#127775;&#127775;&#127775;</p> : ''
+//     const buttonText = this.state.shownState === 'hidden' ? 'show' : 'hide'
+
+//     return (
+//       <div>
+//         <button type='button' onClick={this.toggleText}>{buttonText}</button>
+//         {contentToShow}
+//       </div>
+//     )
+//   }
+// }
+
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render(<ShowButton />)
+
+
+
+
+
+
+// // task 10
+// //
+// import Collapse from './tasks/10th_task.jsx'
+
+// const text = 'Some placeholder content for the collapse component'
+
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render(<Collapse text={text} opened={false} />)
