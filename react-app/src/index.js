@@ -408,58 +408,103 @@ import ReactDOM from 'react-dom/client';
 
 
 
-class TextInput extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {text: props.text, mesages: []}
-  }
+// class TextInput extends React.Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {text: '', mesages: []}
+//   }
 
-  handleChange = (e) => {
-    this.setState({text: e.target.value})
-  }
+//   handleChange = (e) => {
+//     this.setState({text: e.target.value.toUpperCase()})
+//   }
 
-  handleSubmit = (e) => {
-    e.preventDefault()
-    const newArrayMessages = this.state.mesages
-    const inputText = this.state.text
+//   handleSubmit = (e) => {
+//     e.preventDefault()
+//     const newArrayMessages = this.state.mesages
+//     const inputText = this.state.text
 
-    if (!newArrayMessages.includes(inputText)) {
-      newArrayMessages.push(inputText)
-      this.setState({mesages: newArrayMessages})
-    }
-  }
+//     if (!newArrayMessages.includes(inputText)) {
+//       newArrayMessages.push(inputText)
+//       this.setState({mesages: newArrayMessages, text: ''})
+//     }
+//   }
 
-  closeMessage = (e) => {
-    const newArrayMessages = this.state.mesages.filter((elem, id) => e.target.parentNode.key !== id)  
-    this.setState({mesages: newArrayMessages})
-  }
+//   closeMessage = (e) => {
+//     const newArrayMessages = this.state.mesages.filter((elem, id) => Number(e.target.id) !== id)
+//     console.log(newArrayMessages);
+//     this.setState({mesages: newArrayMessages})
+//   }
 
-  render() {
-    console.log(this.state);
-    const mesagesArray = this.state.mesages
-    return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <input onChange={this.handleChange} value={this.state.text} />
-          <input type='submit' />
-        </form>
-        <div>
-          {mesagesArray.map((elem, id) => {
-            return (
-              <div key={id}>
-                {elem}
-                <button style={{ color: 'red', fontSize: '12px', marginLeft: 10 }} onClick={this.closeMessage}>
-                  x
-                </button>
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    )
-  }
-}
+//   render() {
+//     const mesagesArray = this.state.mesages
+//     return (
+//       <div>
+//         <form onSubmit={this.handleSubmit}>
+//           <input onChange={this.handleChange} value={this.state.text} />
+//           <input type='submit' />
+//         </form>
+//         <div>
+//           {mesagesArray.map((elem, id) => {
+//             return (
+//               <div key={id}>
+//                 <button id={id} style={{ color: 'red', fontSize: '12px', marginRight: 10 }} onClick={this.closeMessage}>
+//                   x
+//                 </button>
+//                 {elem}
+//               </div>
+//             )
+//           })}
+//         </div>
+//       </div>
+//     )
+//   }
+// }
+
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render(<TextInput />)
+
+
+// class Checks extends React.Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {listValue : "", isChecked: false}
+//   }
+
+//   changeList = () => {
+//     this.setState({listValue: "nope"})
+//   }
+
+//   changeCheck = () => {
+//     this.setState({isChecked: !this.state.isChecked})
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         <select value={this.state.listValue} onChange={this.changeList}>
+//           <option value="">Select a fruit</option>
+//           <option value="grapefruit">Grapefruit</option>
+//           <option value="nope">Nope!!!</option>
+//           <option value="coconut">Coconut</option>
+//           <option value="mango">Mango</option>
+//         </select>
+//         <hr/>
+//         <input name="isGoing" type="checkbox" checked={this.state.isChecked} onChange={this.changeCheck} />
+//       </div>
+//     )
+//   }
+// }
+
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render(<Checks />)
+
+
+
+
+
+// task 11
+//
+import MyForm from './tasks/11th_task.jsx'
 
 const root = ReactDOM.createRoot(document.getElementById('container'))
-root.render(<TextInput text="ello" />)
-
+root.render(<MyForm />)
