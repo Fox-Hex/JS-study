@@ -401,3 +401,65 @@ import ReactDOM from 'react-dom/client';
 
 // const root = ReactDOM.createRoot(document.getElementById('container'))
 // root.render(<Collapse text={text} opened={false} />)
+
+
+
+
+
+
+
+class TextInput extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {text: props.text, mesages: []}
+  }
+
+  handleChange = (e) => {
+    this.setState({text: e.target.value})
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const newArrayMessages = this.state.mesages
+    const inputText = this.state.text
+
+    if (!newArrayMessages.includes(inputText)) {
+      newArrayMessages.push(inputText)
+      this.setState({mesages: newArrayMessages})
+    }
+  }
+
+  closeMessage = (e) => {
+    const newArrayMessages = this.state.mesages.filter((elem, id) => e.target.parentNode.key !== id)  
+    this.setState({mesages: newArrayMessages})
+  }
+
+  render() {
+    console.log(this.state);
+    const mesagesArray = this.state.mesages
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <input onChange={this.handleChange} value={this.state.text} />
+          <input type='submit' />
+        </form>
+        <div>
+          {mesagesArray.map((elem, id) => {
+            return (
+              <div key={id}>
+                {elem}
+                <button style={{ color: 'red', fontSize: '12px', marginLeft: 10 }} onClick={this.closeMessage}>
+                  x
+                </button>
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    )
+  }
+}
+
+const root = ReactDOM.createRoot(document.getElementById('container'))
+root.render(<TextInput text="ello" />)
+
