@@ -502,9 +502,19 @@ import ReactDOM from 'react-dom/client';
 
 
 
-// task 11
+// // task 11
+// //
+// import MyForm from './tasks/11th_task.jsx'
+
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render(<MyForm />)
+
+
+
+
+// task 12
 //
-import MyForm from './tasks/11th_task.jsx'
+import Component from './tasks/12th_task.jsx'
 
 const root = ReactDOM.createRoot(document.getElementById('container'))
-root.render(<MyForm />)
+root.render(<Component />)
