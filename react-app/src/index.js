@@ -512,9 +512,38 @@ import ReactDOM from 'react-dom/client';
 
 
 
-// task 12
+
+// // task 12
+// //
+// import Component from './tasks/12th_task.jsx'
+
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render(<Component />)
+
+
+
+
+
+// class Parent extends React.Component {
+//   render() {
+//     const {children} = this.props
+//     return <h1>{children}</h1>
+//   }
+// }
+
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render(<Parent><hr/><a href=''>dfsfsdf</a></Parent>)
+
+
+
+
+
+
+// task 13
 //
-import Component from './tasks/12th_task.jsx'
+import TodoBox from './tasks/13th_task.jsx'
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('container'))
-root.render(<Component />)
+root.render(<TodoBox />)
