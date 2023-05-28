@@ -32,9 +32,9 @@ class TodoBox extends React.Component {
   formSubmit = (elemId) => (e) => {
     e.preventDefault()
     const text = this.state.currentText
-    const newTask = [{text: text, id: elemId}, ...this.state.tasks]
+    const newTask = [{ text: text, id: elemId }, ...this.state.tasks]
     this.setState({ currentText: '', tasks: newTask })
-    console.log(this.state);
+    document.querySelector('input.form-control').focus()
   }
 
   remove = (taskId) => () => {
@@ -49,7 +49,7 @@ class TodoBox extends React.Component {
         <div className="mb-3">
           <form className="d-flex" onSubmit={this.formSubmit(uniqueId())}>
             <div className="me-3">
-              <input type="text" value={currentText} required="" className="form-control"
+              <input type="text" value={currentText} required className="form-control"
                 placeholder="I am going..." onChange={this.changeText} />
             </div>
             <button type="submit" className="btn btn-primary">add</button>
@@ -65,9 +65,9 @@ class TodoBox extends React.Component {
     return (
       <div>
         <div className="mb-3">
-          <form className="d-flex" onSubmit={this.formSubmit}>
+          <form className="d-flex" onSubmit={this.formSubmit(uniqueId())}>
             <div className="me-3">
-              <input type="text" value={currentText} required="" className="form-control"
+              <input type="text" value={currentText} required className="form-control"
                 placeholder="I am going..." onChange={this.changeText} />
             </div>
             <button type="submit" className="btn btn-primary">add</button>
@@ -76,7 +76,7 @@ class TodoBox extends React.Component {
 
         {tasks.map((elem) => {
           return (
-            <Item task = {elem} onRemove = {this.remove}/>
+            <Item task = {elem} onRemove = {this.remove} key={elem.id}/>
           )
         })}
 
