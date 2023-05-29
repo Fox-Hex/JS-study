@@ -539,11 +539,48 @@ import ReactDOM from 'react-dom/client';
 
 
 
-// task 13
+// // task 13
+// //
+// import TodoBox from './tasks/13th_task.jsx'
+
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render(<TodoBox />)
+
+
+
+
+
+// const Title = (props) => <h1 className='card-title'>{props.children}</h1>
+// const Body = (props) => <b className='card-body'>{props.children}</b>
+
+// class Card extends React.Component {
+//   static Title = Title
+//   static Body = Body
+//   render() {
+//     return <div className='card card-block'>{this.props.children}</div>
+//   }
+// }
+
+// const vdom = (
+//   <Card>
+//     <Card.Body>
+//       <Card.Title>This is title</Card.Title>
+//       Body containing some text to show
+//     </Card.Body>
+//   </Card>
+// )
+
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render(vdom)
+
+
+
+
+
+
+// task 14
 //
-import TodoBox from './tasks/13th_task.jsx'
-
-
+import Card from './tasks/14th_task.jsx'
 
 const root = ReactDOM.createRoot(document.getElementById('container'))
-root.render(<TodoBox />)
+root.render(<Card />)
