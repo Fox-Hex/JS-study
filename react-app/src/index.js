@@ -582,5 +582,14 @@ import ReactDOM from 'react-dom/client';
 //
 import Card from './tasks/14th_task.jsx'
 
+const vdom = (
+  <Card>
+    <Card.Body>
+      <Card.Title>Title</Card.Title>
+      <Card.Text>Text</Card.Text>
+    </Card.Body>
+  </Card>
+)
+
 const root = ReactDOM.createRoot(document.getElementById('container'))
-root.render(<Card />)
+root.render(vdom)
