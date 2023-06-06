@@ -596,3 +596,129 @@ import ReactDOM from 'react-dom/client';
 
 
 
+
+
+
+
+// const UserContext = React.createContext({})
+
+// class GreetingsComponent extends React.Component {
+//   static contextType = UserContext
+//   render() {
+//     const {name} = this.context
+//     return <div>Hello, {name}</div>
+//   }
+// }
+
+// class App extends React.Component {
+//   render() {
+//     return <GreetingsComponent />
+//   }
+// }
+
+// const vdom = (
+//   <UserContext.Provider value={{name: 'Simon'}}>
+//     <App />
+//   </UserContext.Provider>
+// )
+
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render(vdom)
+
+
+
+// const CompanyContext = React.createContext({})
+
+// class CompanyAddressComponent extends React.Component {
+//   static contextType = CompanyContext
+
+//   render() {
+//     const {address} = this.context
+//     return (
+//       <>
+//       {address.street}
+//       <br />
+//       {address.post} {address.city} {address.country}
+//       </>
+//     )
+//   }
+// }
+
+// class CompanyNameComponent extends React.Component {
+//   static contextType = CompanyContext
+
+//   render() {
+//     const {name} = this.context
+//     return (
+//       <>
+//       {name}
+//       </>
+//     )
+//   }
+// }
+
+// class App extends React.Component {
+//   render() {
+//     return (
+//       <>
+//         <CompanyNameComponent />
+//         <br />
+//         <CompanyAddressComponent />
+//       </>
+//     )
+//   }
+// }
+
+// const company = {
+//   name: 'SuperCorp',
+//   address: {
+//     street: '1st Soviet, 22',
+//     post: '34009',
+//     city: 'Ulianovsk',
+//     country: 'Zimbabve'
+//   }
+// }
+
+// const vdom = (
+//   <CompanyContext.Provider value={company}>
+//     <App />
+//   </CompanyContext.Provider>
+// )
+
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render(vdom)
+
+
+
+
+
+
+
+
+// // task15
+// //
+// import App from './tasks/15th_task/App.jsx'
+
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render(<App />)
+
+
+
+
+
+
+
+// task 16
+//
+import Component from './tasks/16th_task/Component.jsx'
+
+const root = ReactDOM.createRoot(document.getElementById('container'))
+root.render(<Component />)
+
+
+
+
+
+
+
+
