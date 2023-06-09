@@ -708,17 +708,110 @@ import ReactDOM from 'react-dom/client';
 
 
 
-// task 16
+// // task 16
+// //
+// import Component from './tasks/16th_task/Component.jsx'
+
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render(<Component />)
+
+
+
+
+
+
+// import reactTestRenderer from 'react-test-renderer';
+
+// const renderer = reactTestRenderer.create(
+//   <a href="https://www.facebook.com/">Facebook</a>
+// );
+
+// console.log(renderer.toJSON());
+
+
+
+
+// import axios from 'axios';
+
+// class Loader extends React.Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {url: null}
+//     this.path = './image'
+//   }
+
+//   handleClick = async () => {
+//     const res = await axios.get(this.path)
+//     this.setState({url: res.data})
+//   }
+
+//   render() {
+//     const {url} = this.state
+//     const img = `${this.path}/${url}`
+//     return (
+//       <div>
+//         <button onClick={this.handleClick}>Load Logo</button>
+//         {url && <img alt='' src={img} />}
+//       </div>
+//     )
+//   }
+// }
+
+// const root = ReactDOM.createRoot(document.getElementById('container'))
+// root.render(<Loader />)
+
+
+
+
+
+
+// // task 17
+// //
+// import Autocomplete from './tasks/17th_task.jsx'
+
+// const root = ReactDOM.createRoot(document.querySelector('.container'))
+// root.render(<Autocomplete />)
+
+
+
+
+
+
+// class Clock extends React.Component {
+//   constructor(props) {
+//     super(props)
+//     this.state = {date: new Date()}
+//   }
+  
+//   componentDidMount() {
+//     this.timerId = setInterval(() => this.setState({date: new Date()}), 1000);
+//   }
+
+//   componentWillUnmount() {
+//     clearInterval(this.timerId)
+//   }
+
+//   render() {
+//     const {date} = this.state
+//     reimport Todoturn (
+//       <div>{date.toLocaleTimeString()}</div>
+//     )
+//   }
+// }
+
+// const root = ReactDOM.createRoot(document.querySelector('.container'))
+// root.render(<Clock />)
+
+
+
+
+
+
+
+// task 18
 //
-import Component from './tasks/16th_task/Component.jsx'
+import TodoBox from './tasks/18th_task/TodoBox.jsx';
 
-const root = ReactDOM.createRoot(document.getElementById('container'))
-root.render(<Component />)
-
-
-
-
-
-
-
+const root = ReactDOM.createRoot(document.querySelector('.container'))
+root.render(<TodoBox />)
 
