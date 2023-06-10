@@ -808,10 +808,78 @@ import ReactDOM from 'react-dom/client';
 
 
 
-// task 18
-//
-import TodoBox from './tasks/18th_task/TodoBox.jsx';
+// // task 18
+// //
+// import TodoBox from './tasks/18th_task/TodoBox.jsx';
 
+// const root = ReactDOM.createRoot(document.querySelector('.container'))
+// root.render(<TodoBox />)
+
+
+
+
+
+
+
+
+// class CustomInput extends React.Component {
+//   constructor(props) {
+//     super(props)
+//     this.textInput = React.createRef()
+//   }
+  
+//   handleFocusInput = () => {
+//     console.log(this.textInput);
+//     this.textInput.current.focus()
+//   }
+
+//   render() {
+//     return (
+//       <div>
+//         <input type="text" ref={this.textInput} />
+//         <input type="button" value="Focus the text input" onClick={this.handleFocusInput} />
+//       </div>
+//     )
+//   }
+// }
+
+// const root = ReactDOM.createRoot(document.querySelector('.container'))
+// root.render(<CustomInput />)
+
+
+
+
+
+
+
+import $ from 'jquery'
+
+class Chosen extends React.Component {
+  constructor(props) {
+    super(props)
+    this.selectRef = React.createRef()
+  }
+
+  componentDidMount() {
+    $(this.selectRef.current).chosen()
+  }
+
+  render() {
+    return (
+      <select ref={this.selectRef}>
+        {this.props.items.map(elem => <option>{elem}</option>)}
+      </select>
+    )
+  }
+}
+
+const items = ['Document', 'Window', 'Body'];
 const root = ReactDOM.createRoot(document.querySelector('.container'))
-root.render(<TodoBox />)
+root.render(<Chosen items={items}/>)
+
+
+
+
+
+
 
