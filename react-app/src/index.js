@@ -852,34 +852,65 @@ import ReactDOM from 'react-dom/client';
 
 
 
-import $ from 'jquery'
+// import $ from 'jquery'
 
-class Chosen extends React.Component {
-  constructor(props) {
-    super(props)
-    this.selectRef = React.createRef()
-  }
+// class Chosen extends React.Component {
+//   constructor(props) {
+//     super(props)
+//     this.selectRef = React.createRef()
+//   }
 
-  componentDidMount() {
-    $(this.selectRef.current).chosen()
-  }
+//   componentDidMount() {
+//     $(this.selectRef.current).chosen()
+//   }
 
-  render() {
-    return (
-      <select ref={this.selectRef}>
-        {this.props.items.map(elem => <option>{elem}</option>)}
-      </select>
-    )
-  }
+//   render() {
+//     return (
+//       <select ref={this.selectRef}>
+//         {this.props.items.map(elem => <option>{elem}</option>)}
+//       </select>
+//     )
+//   }
+// }
+
+// const items = ['Document', 'Window', 'Body'];
+// const root = ReactDOM.createRoot(document.querySelector('.container'))
+// root.render(<Chosen items={items}/>)
+
+
+
+
+
+
+// // task 19
+// //
+// import MarkdownEditor from './tasks/19th_task.jsx'
+
+// const root = ReactDOM.createRoot(document.querySelector('.container'))
+// root.render(<MarkdownEditor onContentChange={console.log} />)
+
+
+
+
+
+
+
+
+
+// HOOKS
+
+
+
+const Example = () => {
+  const [count, setCount] = React.useState(0)
+
+  return (
+    <div>
+      <p>You press {count} times</p>
+      <button onClick={() => setCount(count + 1)}>press</button>
+    </div>
+  )
 }
 
-const items = ['Document', 'Window', 'Body'];
 const root = ReactDOM.createRoot(document.querySelector('.container'))
-root.render(<Chosen items={items}/>)
-
-
-
-
-
-
-
+root.render(<Example />)
