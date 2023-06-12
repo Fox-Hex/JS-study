@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import cn from 'classnames'
 
+
+
+
 // task 2
 //
 // import getCard from './tasks/2nd_task.jsx'
@@ -901,16 +904,72 @@ import ReactDOM from 'react-dom/client';
 
 
 
-const Example = () => {
-  const [count, setCount] = React.useState(0)
 
-  return (
-    <div>
-      <p>You press {count} times</p>
-      <button onClick={() => setCount(count + 1)}>press</button>
-    </div>
-  )
-}
+// const Example = () => {
+//   const [count, setCount] = React.useState(0)
+
+//   return (
+//     <div>
+//       <p>You press {count} times</p>
+//       <button onClick={() => setCount(count + 1)}>press</button>
+//     </div>
+//   )
+// }
+
+// const root = ReactDOM.createRoot(document.querySelector('.container'))
+// root.render(<Example />)
+
+
+
+
+
+// // task 1
+// //
+// import BtnGroup from './tasks/hooks/1st_task.jsx'
+
+// const root = ReactDOM.createRoot(document.querySelector('.container'))
+// root.render(<BtnGroup />)
+
+
+
+
+
+// const Example = () => {
+//   const [count, setCount] = React.useState(0)
+//   const [background, setBackground] = React.useState('white')
+
+//   React.useEffect(() => {
+//     console.log(count);
+//     const newColor = count%2 === 0 ? 'white' : 'blue'
+//     setBackground(newColor)
+    
+//     const id = setTimeout(() => console.log('fffffff'), 1000)
+//     return () => clearTimeout(id)
+//   }, [count])
+
+
+//   return (
+//     <div>
+//       <p style={{background}}>Вы нажали {count} раз(а)</p>
+//       <button onClick={() => setCount(count + 1)}>Нажми меня</button>
+//     </div>
+//   )
+// }
+
+// const root = ReactDOM.createRoot(document.querySelector('.container'))
+// root.render(<Example />)
+
+
+
+
+
+
+// task 2
+//
+import Products from './tasks/hooks/2nd_task/Products.jsx';
 
 const root = ReactDOM.createRoot(document.querySelector('.container'))
-root.render(<Example />)
+root.render(<Products />)
+
+
+
