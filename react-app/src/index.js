@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 // import cn from 'classnames'
 
@@ -964,12 +964,93 @@ import ReactDOM from 'react-dom/client';
 
 
 
-// task 2
-//
-import Products from './tasks/hooks/2nd_task/Products.jsx';
+// // task 2
+// //
+// import Products from './tasks/hooks/2nd_task/Products.jsx';
 
-const root = ReactDOM.createRoot(document.querySelector('.container'))
-root.render(<Products />)
+// const root = ReactDOM.createRoot(document.querySelector('.container'))
+// root.render(<Products />)
+
+
+
+
+
+
+// // task 3
+// //
+// import App from './tasks/hooks/3rd_task/App.jsx';
+
+// const root = ReactDOM.createRoot(document.querySelector('.container'))
+// root.render(<App />)
+
+
+
+
+
+
+// const Input = () => {
+//   let counter = 0
+//   const inputEl = React.useRef(null)
+//   const input2 = React.useRef(null)
+
+//   const onButtonClick = () => {
+//     inputEl.current.focus()
+//     counter += 1
+//     input2.current.value = counter
+//   }
+
+//   return (
+//     <>
+//     <input ref={input2} type='text'/>
+//     <button onClick={onButtonClick}>focus</button>
+//     <input ref={inputEl} type='text'/>
+//     </>
+//   )
+// }
+
+// const root = ReactDOM.createRoot(document.querySelector('.container'))
+// root.render(<Input />)
+
+
+
+// const Counter = () => {
+//   const [count, setCount] = React.useState(0)
+
+//   const prevCountRef = React.useRef()
+
+//   React.useEffect(() => {
+//     prevCountRef.current = count
+//   })
+
+//   const prevCount = prevCountRef.current
+
+//   return (
+//     <h1 onClick={() => setCount(count+1)}>
+//       click me
+//       <br />
+//       now: {count}
+//       <br />
+//       before: {prevCount}
+//     </h1>
+//   )
+// }
+
+// const root = ReactDOM.createRoot(document.querySelector('.container'))
+// root.render(<Counter />)
+
+
+
+
+
+
+
+// // task 4
+// //
+// import MarkdownEditor from './tasks/hooks/4th_task.jsx'
+
+// const root = ReactDOM.createRoot(document.querySelector('.container'))
+// root.render(<MarkdownEditor onContentChange={console.log} />)
+
 
 
 
