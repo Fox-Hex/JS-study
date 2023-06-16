@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom/client';
 
 // task 2
 //
-// import getCard from './tasks/2nd_task.jsx'
+// import getCard from './tasks/react/2nd_task.jsx'
 // const Code = getCard({ title: 'hi', text: 'how are you?' });
 // // <div className="card">
 // //   <div className="card-body">
@@ -47,7 +47,7 @@ import ReactDOM from 'react-dom/client';
 
 // // task 3
 // //
-// import Card from './tasks/3rd_task.jsx'
+// import Card from './tasks/react/3rd_task.jsx'
 // const root = ReactDOM.createRoot(document.getElementById('container'));
 
 // // const title = "title 11111";
@@ -117,7 +117,7 @@ import ReactDOM from 'react-dom/client';
 
 // // task 4
 // //
-// import DefinitionsList from './tasks/4th_task.jsx'
+// import DefinitionsList from './tasks/react/4th_task.jsx'
 
 // const definitions = [
 //   { dt: 'one', dd: 'two', id: 1 },
@@ -132,7 +132,7 @@ import ReactDOM from 'react-dom/client';
 
 // task 5
 //
-// import Progress from './tasks/5th_task.jsx'
+// import Progress from './tasks/react/5th_task.jsx'
 
 // const root = ReactDOM.createRoot(document.getElementById('container'));
 // root.render(<Progress percentage={65} />);
@@ -179,7 +179,7 @@ import ReactDOM from 'react-dom/client';
 
 // // 6 task
 // //
-// import Alert from './tasks/6th_task.jsx'
+// import Alert from './tasks/react/6th_task.jsx'
 
 // const root = ReactDOM.createRoot(document.getElementById('container'));
 // root.render(<Alert type="primary" text="what is love?" />);
@@ -229,7 +229,7 @@ import ReactDOM from 'react-dom/client';
 
 // // 7 task
 // //
-// import ListGroup from './tasks/7th_task.jsx'
+// import ListGroup from './tasks/react/7th_task.jsx'
 
 // const root = ReactDOM.createRoot(document.getElementById('container'));
 // const vdom =
@@ -325,7 +325,7 @@ import ReactDOM from 'react-dom/client';
 
 // // task 8
 // //
-// import BtnGroup from './tasks/8th_task.jsx'
+// import BtnGroup from './tasks/react/8th_task.jsx'
 
 // const root = ReactDOM.createRoot(document.getElementById('container'))
 // root.render(<BtnGroup />)
@@ -353,7 +353,7 @@ import ReactDOM from 'react-dom/client';
 
 // // task 9
 // //
-// import Carousel from './tasks/9th_task.jsx'
+// import Carousel from './tasks/react/9th_task.jsx'
 
 // const images = ['/images/first.jpeg', '/images/second.jpeg', '/images/third.jpeg'];
 // const root = ReactDOM.createRoot(document.getElementById('container'))
@@ -398,7 +398,7 @@ import ReactDOM from 'react-dom/client';
 
 // // task 10
 // //
-// import Collapse from './tasks/10th_task.jsx'
+// import Collapse from './tasks/react/10th_task.jsx'
 
 // const text = 'Some placeholder content for the collapse component'
 
@@ -507,7 +507,7 @@ import ReactDOM from 'react-dom/client';
 
 // // task 11
 // //
-// import MyForm from './tasks/11th_task.jsx'
+// import MyForm from './tasks/react/11th_task.jsx'
 
 // const root = ReactDOM.createRoot(document.getElementById('container'))
 // root.render(<MyForm />)
@@ -518,7 +518,7 @@ import ReactDOM from 'react-dom/client';
 
 // // task 12
 // //
-// import Component from './tasks/12th_task.jsx'
+// import Component from './tasks/react/12th_task.jsx'
 
 // const root = ReactDOM.createRoot(document.getElementById('container'))
 // root.render(<Component />)
@@ -544,7 +544,7 @@ import ReactDOM from 'react-dom/client';
 
 // // task 13
 // //
-// import TodoBox from './tasks/13th_task.jsx'
+// import TodoBox from './tasks/react/13th_task.jsx'
 
 // const root = ReactDOM.createRoot(document.getElementById('container'))
 // root.render(<TodoBox />)
@@ -583,7 +583,7 @@ import ReactDOM from 'react-dom/client';
 
 // // task 14
 // //
-// import Card from './tasks/14th_task.jsx'
+// import Card from './tasks/react/14th_task.jsx'
 
 // const vdom = (
 //   <Card>
@@ -700,7 +700,7 @@ import ReactDOM from 'react-dom/client';
 
 // // task15
 // //
-// import App from './tasks/15th_task/App.jsx'
+// import App from './tasks/react/15th_task/App.jsx'
 
 // const root = ReactDOM.createRoot(document.getElementById('container'))
 // root.render(<App />)
@@ -770,7 +770,7 @@ import ReactDOM from 'react-dom/client';
 
 // // task 17
 // //
-// import Autocomplete from './tasks/17th_task.jsx'
+// import Autocomplete from './tasks/react/17th_task.jsx'
 
 // const root = ReactDOM.createRoot(document.querySelector('.container'))
 // root.render(<Autocomplete />)
@@ -813,7 +813,7 @@ import ReactDOM from 'react-dom/client';
 
 // // task 18
 // //
-// import TodoBox from './tasks/18th_task/TodoBox.jsx';
+// import TodoBox from './tasks/react/18th_task/TodoBox.jsx';
 
 // const root = ReactDOM.createRoot(document.querySelector('.container'))
 // root.render(<TodoBox />)
@@ -887,7 +887,7 @@ import ReactDOM from 'react-dom/client';
 
 // // task 19
 // //
-// import MarkdownEditor from './tasks/19th_task.jsx'
+// import MarkdownEditor from './tasks/react/19th_task.jsx'
 
 // const root = ReactDOM.createRoot(document.querySelector('.container'))
 // root.render(<MarkdownEditor onContentChange={console.log} />)
@@ -1054,3 +1054,237 @@ import ReactDOM from 'react-dom/client';
 
 
 
+
+
+
+
+
+
+// REDUX
+
+
+
+
+// import {createStore} from 'redux'
+
+// const reducer = (state = 0, action) => {
+//   switch(action.type) {
+//     case 'INCREMENT' : return state+1
+//     case 'DECREMENT' : return state-1
+//     default : return state
+//   }
+// }
+
+// const store = createStore(reducer)
+
+// console.log(store.getState())
+
+// store.subscribe(() => console.log(store.getState()))
+
+// store.dispatch({type: 'INCREMENT'})
+// store.dispatch({type: 'INCREMENT'})
+
+// const increment = () => ({type: 'INCREMENT'})
+// const decrement = () => ({type: 'DECREMENT'})
+
+// store.dispatch(increment())
+// store.dispatch(increment())
+// store.dispatch(decrement())
+
+
+
+
+// import {createStore} from 'redux'
+
+// const reducer = (state = [], action) => {
+//   switch(action.type) {
+//     case 'USER_ADD':
+//       const {user} = action.payload
+//       return [...state, user]
+//     case 'USER_REMOVE':
+//       const {id} = action.payload
+//       return state.filter(elem => id !== elem.id)
+//     default: return state
+//   }
+// }
+
+// const addUser = (user) => ({ type: 'USER_ADD', payload: {user} })
+// const user1 = {id:2, name: 'vano'}
+// const user2 = {id:3, name: 'niko'}
+
+// const store = createStore(reducer, [{id: 1, name: 'noname'}])
+
+// store.subscribe(() => console.table(store.getState()))
+
+// store.dispatch(addUser(user1))
+// store.dispatch(addUser(user2))
+// store.dispatch({type: 'USER_REMOVE', payload: {id:1}})
+
+
+
+
+// const createStore = (reducer, initialState = null) => {
+//   let state = initialState
+//   return {
+//     dispatch: action => {state = reducer(state, action)},
+//     getState: () => state
+//   }
+// }
+
+// const reducer = (state = 0, action) => {
+//   switch(action.type) {
+//     case 'PLUS':
+//       return state+1
+//     case 'MINUS':
+//       return state-1
+//     default:
+//       return state
+//   }
+// }
+
+// const store = createStore(reducer, 0)
+// console.log(store.getState());
+
+// store.dispatch({type: 'MINUS'})
+// console.log(store.getState());
+
+
+
+
+
+
+
+// // task 1
+// //
+// import {omit} from 'lodash';
+// import {createStore} from 'redux';
+
+// const store = (initialState) => {
+//   const reducer = (state = {}, action) => {
+//     switch(action.type) {
+//       case 'TASK_ADD':
+//         const {task} = action.payload
+//         return {...state, [task.id]: task}
+//       case 'TASK_REMOVE':
+//         const {id} = action.payload
+//         return omit(state, id)
+//       default: return state
+//     }
+//   }
+  
+//   return createStore(reducer, initialState)
+// }
+
+// const addTask = (task) => ({
+//   type: 'TASK_ADD',
+//   payload: {
+//     task,
+//   },
+// });
+
+// const removeTask = (id) => ({
+//   type: 'TASK_REMOVE',
+//   payload: {
+//     id,
+//   },
+// });
+
+// const generalStore = store({3:{id:3}})
+// console.log(generalStore.getState());
+
+// const task1 = {id: 7}
+// generalStore.dispatch(addTask(task1))
+// console.log(generalStore.getState());
+
+// generalStore.dispatch(removeTask(3))
+// console.log(generalStore.getState());
+
+
+
+
+
+
+
+// import {combineReducers, createStore} from 'redux'
+
+// const todosReducer = (state = [], action) => {}
+// const commentsReducers = (state = [], action) => {}
+
+// const rootReducer = combineReducers({
+//   todos: todosReducer,
+//   comments: combineReducers
+// })
+
+// const store = createStore(rootReducer)
+
+
+
+
+
+
+
+// task 2
+//
+import _ from 'lodash';
+import {combineReducers, createStore} from 'redux'
+
+const comments = (state = {}, action) => {
+  // BEGIN (write your solution here)
+  switch(action.type) {
+    case 'TASK_COMMENT_ADD':
+      const {comment} = action.payload
+      return {...state, [comment.id]: {id:comment.id, taskId:comment.taskId, body: comment.body}}
+    case 'TASK_COMMENT_REMOVE':
+      const {id} = action.payload
+      return _.omitBy(state, (key, value) => value.taskId === id)
+    default:
+      return state
+  }
+  // END
+};
+
+const tasks = (state = {}, action) => {
+  // BEGIN (write your solution here)
+  switch(action.type) {
+    case 'TASK_ADD':
+      const {task} = action.payload
+      return {...state, [task.id]: {id:task.id, name:task.name}}
+    case 'TASK_REMOVE':
+      const {id} = action.payload
+      return _.omitBy(state, id)
+    default:
+      return state
+  }
+  // END
+};
+
+const rootReducer = combineReducers({ comments, tasks });
+
+
+const addTask = (task) => ({
+  type: 'TASK_ADD',
+  payload: {
+    task,
+  },
+});
+
+const removeTask = (id) => ({
+  type: 'TASK_REMOVE',
+  payload: {
+    id,
+  },
+});
+
+const addTaskComment = (comment) => ({
+  type: 'TASK_COMMENT_ADD',
+  payload: {
+    comment,
+  },
+});
+
+const removeTaskComment = (id) => ({
+  type: 'TASK_COMMENT_REMOVE',
+  payload: {
+    id,
+  },
+});
