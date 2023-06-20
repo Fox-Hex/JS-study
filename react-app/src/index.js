@@ -1223,71 +1223,73 @@ import ReactDOM from 'react-dom/client';
 
 
 
-// task 2
-//
-import _ from 'lodash';
-import {combineReducers, createStore} from 'redux'
+// // task 2
+// //
+// import _ from 'lodash';
+// import {combineReducers, createStore} from 'redux'
 
-const comments = (state = {}, action) => {
-  // BEGIN (write your solution here)
-  switch(action.type) {
-    case 'TASK_COMMENT_ADD':
-      const {comment} = action.payload
-      return {...state, [comment.id]: {id:comment.id, taskId:comment.taskId, body: comment.body}}
-    case 'TASK_COMMENT_REMOVE':
-      const {id} = action.payload
-      return _.omitBy(state, (key, value) => value.taskId === id)
-    default:
-      return state
-  }
-  // END
-};
+// const comments = (state = {}, action) => {
+//   // BEGIN (write your solution here)
+//   switch(action.type) {
+//     case 'TASK_COMMENT_ADD':
+//       const {comment} = action.payload
+//       return {...state, [comment.id]: comment}
+//     case 'TASK_COMMENT_REMOVE':
+//       return _.omit(state, action.payload.id)
+//     case 'TASK_REMOVE':
+//       const {id} = action.payload
+//       return _.omitBy(state, (c) => c.taskId === id)
+//     default:
+//       return state
+//   }
+//   // END
+// };
 
-const tasks = (state = {}, action) => {
-  // BEGIN (write your solution here)
-  switch(action.type) {
-    case 'TASK_ADD':
-      const {task} = action.payload
-      return {...state, [task.id]: {id:task.id, name:task.name}}
-    case 'TASK_REMOVE':
-      const {id} = action.payload
-      return _.omitBy(state, id)
-    default:
-      return state
-  }
-  // END
-};
+// const tasks = (state = {}, action) => {
+//   // BEGIN (write your solution here)
+//   switch(action.type) {
+//     case 'TASK_ADD':
+//       const {task} = action.payload
+//       return {...state, [task.id]: task}
+//     case 'TASK_REMOVE':
+//       const {id} = action.payload
+//       return _.omit(state, id)
+//     default:
+//       return state
+//   }
+//   // END
+// };
 
-const rootReducer = combineReducers({ comments, tasks });
+// const rootReducer = combineReducers({ comments, tasks });
 
 
-const addTask = (task) => ({
-  type: 'TASK_ADD',
-  payload: {
-    task,
-  },
-});
+// const addTask = (task) => ({
+//   type: 'TASK_ADD',
+//   payload: {
+//     task,
+//   },
+// });
 
-const removeTask = (id) => ({
-  type: 'TASK_REMOVE',
-  payload: {
-    id,
-  },
-});
+// const removeTask = (id) => ({
+//   type: 'TASK_REMOVE',
+//   payload: {
+//     id,
+//   },
+// });
 
-const addTaskComment = (comment) => ({
-  type: 'TASK_COMMENT_ADD',
-  payload: {
-    comment,
-  },
-});
+// const addTaskComment = (comment) => ({
+//   type: 'TASK_COMMENT_ADD',
+//   payload: {
+//     comment,
+//   },
+// });
 
-const removeTaskComment = (id) => ({
-  type: 'TASK_COMMENT_REMOVE',
-  payload: {
-    id,
-  },
-});
+// const removeTaskComment = (id) => ({
+//   type: 'TASK_COMMENT_REMOVE',
+//   payload: {
+//     id,
+//   },
+// });
 
 
 
