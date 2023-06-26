@@ -1296,3 +1296,28 @@ import ReactDOM from 'react-dom/client';
 
 
 
+
+
+
+
+
+// REDUX-TOOLKIT
+
+
+
+
+import { Provider } from 'react-redux'
+
+import App from './lessons/less1/components/App.jsx'
+import store from './lessons/less1/slices/index.js'
+
+
+const root = ReactDOM.createRoot(document.querySelector('.container'))
+
+const vdom = (
+  <Provider store={store}>
+    <App />
+  </Provider>
+)
+
+root.render(vdom)
