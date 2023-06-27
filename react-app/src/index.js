@@ -130,8 +130,8 @@ import ReactDOM from 'react-dom/client';
 
 
 
-// task 5
-//
+// // task 5
+
 // import Progress from './tasks/react/5th_task.jsx'
 
 // const root = ReactDOM.createRoot(document.getElementById('container'));
